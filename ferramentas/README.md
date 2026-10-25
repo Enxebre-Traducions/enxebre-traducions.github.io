@@ -17,6 +17,7 @@ vale para todo o xogo e non hai que tocar nin un punteiro.
 | `render.py` | Debuxa texto cos tiles reais da ROM parcheada a un PNG (para revisar sen emulador) |
 | `mkbps.py` | Xera un parche BPS con sumas CRC32 e comproba que reproduce a ROM destino |
 | `applyips.py` | Aplica un parche IPS (útil para reconstruír a ROM base doutra tradución) |
+| `iconos.py` | Debuxa en pixel art o icono da web (o mando coa bandeira) e escribe o logo e o favicon: `python3 ferramentas/iconos.py mando` |
 
 ## Fluxo
 
