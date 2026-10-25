@@ -18,10 +18,10 @@ disableKinds = ["taxonomy", "term"]
   # Cada xogo ten o seu fío polo nome da ficha (non pola URL), así que
   # sobreviven a un cambio de dominio.
   [params.giscus]
-    repo = "enxebre-traducions/enxebre-traducions.github.io"
-    repoId = "R_kgDOUFMedw"
+    repo = "Enxebre-Traducions/enxebre-traducions.github.io"
+    repoId = "R_kgDOVXLV1w"
     categoria = "Announcements"
-    categoriaId = "DIC_kwDOUFMed84DJcGw"
+    categoriaId = "DIC_kwDOVXLV184DJmwf"
     # giscus aínda non ten galego
     lingua = "es"
 
