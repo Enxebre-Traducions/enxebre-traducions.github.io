@@ -13,8 +13,10 @@ estado: "Completa (Sordland)"
 probada: true
 probada_data: 2026-10-25
 
-portada: "capturas/xornal.webp"
+portada: "capturas/menu.webp"
 galeria:
+  - imaxe: "capturas/menu-enteiro.webp"
+    texto: "O menú principal, en galego"
   - imaxe: "capturas/xornal.webp"
     texto: "O xornal da mañá, en galego"
   - imaxe: "capturas/conversa.webp"
