@@ -7,11 +7,11 @@ plataforma: "PC (Steam)"
 ano: 2020
 compania: "Torpor Games"
 xenero: "Narrativa política"
-version: "0.9"
+version: "1.0"
 estado: "Completa (Sordland)"
 
-probada: false
-sen_probar: "Está traducida enteira e pasou as comprobacións automáticas (corrector ortográfico, marcas e comiñas de cada texto). Comprobouse tamén que unha partida carga e que as conversas, os xornais e os menús saen en galego, pero aínda ninguén a xogou de principio a fin."
+probada: true
+probada_data: 2026-10-25
 
 portada: "capturas/xornal.webp"
 galeria:
@@ -48,8 +48,8 @@ instalador:
 
 descargas:
   - nome: "Instalador para Linux"
-    nota: "Versión 0.9 (.zip). Sen ficheiros do xogo"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/suzerain-v0.9/Suzerain-en-galego-0.9.zip"
+    nota: "Versión 1.0 (.zip). Sen ficheiros do xogo"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/suzerain-v1.0/Suzerain-en-galego-1.0.zip"
     destacada: true
 
 creditos:
