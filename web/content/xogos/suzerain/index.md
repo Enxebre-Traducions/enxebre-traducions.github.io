@@ -28,9 +28,10 @@ traducido:
   - "O códex enteiro, as políticas e as situacións"
   - "A interface: menús, mapa, paneis do goberno e da Asemblea, e os cargos dos personaxes"
 sen_traducir:
-  - "O DLC *Kingdom of Rizia*"
-  - "Uns poucos rótulos que van dentro do código do xogo, como «Open City Information» ou «Read the report.»"
-  - "As etiquetas da personalización do presidente (*Hair*, *Attire*…)"
+  - "O DLC *Kingdom of Rizia*: traducimos só o xogo base, Sordland, porque o DLC non o temos e non o poderiamos probar"
+  - "Uns poucos rótulos e avisos que escribe o propio programa do xogo, como «Open City Information», «Read the report.» ou «Are you sure…?»: non están nos ficheiros de texto que traduce o instalador, senón dentro do código, e cambialos obrigaría a modificar o programa, co risco de rompelo"
+  - "As etiquetas da personalización do presidente (*Hair*, *Attire*, *Background*…): o xogo xéraas no código a partir dunha lista interna, así que pasa o mesmo"
+  - "Os nomes das etnias e relixións nas fichas das cidades do mapa (*Sordish*, *Bludish*, *Agno-Sordish*…): o xogo úsaos por dentro como identificadores e, se se traducen, a partida bloquéase ao comezar a primeira quenda"
 
 rom:
   nome: "Suzerain en Steam, versión 3.1.0"
@@ -59,5 +60,7 @@ creditos:
 Suzerain é un xogo de política sen disparos: es Anton Rayne, presidente recén elixido de Sordland, un país que acaba de saír dunha ditadura, e cada conversa cos ministros, os xornalistas ou a túa familia vai decidindo que tipo de goberno fas. Ten moitísimo texto, e todo importa.
 
 Está traducida toda a historia de Sordland, que é o xogo base. Fíxose con intelixencia artificial a partir da tradución ao castelán do mesmo proxecto, xa revisada, coidando o trato: os ministros tratan o presidente de *vostede*, e a familia e os amigos, de *ti*.
+
+A versión 1.0 corrixe os dous erros que se atoparon ao xogala enteira: as palabras resaltadas saían entre asteriscos (\*así\*) en vez de entre comiñas (“así”), e moitas frases empezaban por «Bo,» onde en galego se di «Ben,». Se tes posta a 0.9, abonda con instalar a 1.0 por riba.
 
 Se tes posta a tradución ao castelán, o instalador galego aproveita os ficheiros orixinais que gardou ela. Para pasar do galego ao castelán, desinstala antes o galego.
