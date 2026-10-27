@@ -1,0 +1,8 @@
+{{/* Reprodutor de audio para un ficheiro da propia ficha: {{< audio src="mostra.mp3" texto="Pé" >}}.
+     Pásase por Resources.Get para que Hugo publique o ficheiro xunto á páxina. */}}
+{{ with .Page.Resources.Get (.Get "src") }}
+<figure class="audio">
+  <audio controls preload="none" src="{{ .RelPermalink }}"></audio>
+  {{ with $.Get "texto" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{ end }}

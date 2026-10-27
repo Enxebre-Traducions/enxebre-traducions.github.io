@@ -21,5 +21,5 @@
     <input class="comp-rango" type="range" min="0" max="100" value="50" aria-label="Mover a liña entre o orixinal e o galego">
   </div>
   {{ end }}
-  <p class="nota-pe">Arrastra a liña para comparar. Capturas sacadas do emulador co parche aplicado.</p>
+  <p class="nota-pe">{{ with $p.comparacions_nota }}{{ . }}{{ else }}Arrastra a liña para comparar. Capturas sacadas do emulador co parche aplicado.{{ end }}</p>
 </section>

@@ -14,6 +14,7 @@ body:
       options:
         - Castlevania (NES)
         - Suzerain (PC)
+        - "Penumbra: Overture (PC)"
         - Outro
     validations:
       required: true
