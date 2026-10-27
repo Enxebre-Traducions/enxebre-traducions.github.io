@@ -31,6 +31,13 @@ comparacions:
     orixinal: "capturas/pozo-12-en.webp"
     galego: "capturas/pozo-12-gl.webp"
 comparacions_nota: "Arrastra a liña para comparar. Son as texturas do xogo: a orixinal e a que pon o parche."
+galeria:
+  - imaxe: "capturas/carta.webp"
+    texto: "Unha carta no barco, en galego"
+  - imaxe: "capturas/carga.webp"
+    texto: "As pantallas de carga contan a historia de Philip"
+  - imaxe: "capturas/mapa-xogo.webp"
+    texto: "O mapa da mina vella e un pensamento de Philip"
 
 traducido:
   - "Todos os textos: menús, opcións, notas, diarios, descricións dos obxectos, as mensaxes de Red pola radio, a intro e as pantallas de carga"
