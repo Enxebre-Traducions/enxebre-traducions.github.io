@@ -40,8 +40,8 @@ xogos serían meses de enxeñaría inversa en vez de días de tradución.
 | Xogo | Sistema | Versión | Estado | Probada por humanos |
 |---|---|---|---|---|
 | [Castlevania (USA) (Rev 0)](https://enxebre-traducions.github.io/xogos/castlevania-nes/) | NES | v1.0 | Completa | ✅ Si, xogada enteira en ares |
-| [Suzerain](https://enxebre-traducions.github.io/xogos/suzerain/) | PC (Steam, Linux) | v1.0 | Completa (Sordland) | ✅ Si, xogada enteira |
-| [Penumbra: Overture](https://enxebre-traducions.github.io/xogos/penumbra-overture/) | PC (Steam, Linux) | v0.9 | Completa, con dobraxe opcional | ⏳ Aínda non |
+| [Suzerain](https://enxebre-traducions.github.io/xogos/suzerain/) | PC (Linux) | v1.0.1 | Completa (Sordland) | ✅ Si, xogada enteira |
+| [Penumbra: Overture](https://enxebre-traducions.github.io/xogos/penumbra-overture/) | PC (Linux) | v0.9.1 | Completa, con dobraxe opcional | ⏳ Aínda non |
 
 «Probada por humanos» quere dicir que unha persoa xogou o xogo enteiro coa
 tradución posta. As que aínda non o están pasaron as comprobacións

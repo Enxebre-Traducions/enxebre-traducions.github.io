@@ -3,11 +3,11 @@ title: "Penumbra: Overture"
 date: 2026-10-27
 subtitulo: "Terror nunha mina de Groenlandia, en galego: textos, carteis, mapas e, se queres, tamén as voces."
 sistema: "PC"
-plataforma: "PC (Steam)"
+plataforma: "PC (Linux)"
 ano: 2007
 compania: "Frictional Games"
 xenero: "Terror"
-version: "0.9"
+version: "0.9.1"
 estado: "Completa, con dobraxe opcional"
 
 probada: false
@@ -48,27 +48,27 @@ sen_traducir:
   - "Os berros de Red no incinerador: non teñen texto e quedan os orixinais tamén na dobraxe"
 
 rom:
-  nome: "Penumbra: Overture en Steam"
-  nota: "A versión para Linux. O paquete non trae o xogo: precisas telo instalado."
+  nome: "Penumbra: Overture, probada coa versión de Steam para Linux"
+  nota: "Vale tamén a versión para Linux doutra tenda e a de Windows xogada con Wine, Proton, Heroic, Lutris ou Bottles (a de GOG, por exemplo), aínda sen probar. O paquete non trae o xogo: precisas telo instalado."
 
 instalador:
-  onde: "Linux (Steam)"
+  onde: "Linux"
   pasos:
     - "Escolle un dos dous paquetes, **con dobraxe** ou **só textos**, e descomprímeo onde queiras."
     - "Pecha o xogo."
-    - "Abre unha terminal dentro da carpeta e executa `bash instalar.sh`. Busca Penumbra: Overture el só nas túas bibliotecas de Steam; se non o atopa, pásalle a carpeta do xogo."
+    - "Abre unha terminal dentro da carpeta e executa `bash instalar.sh`. Busca Penumbra: Overture el só (Steam, Heroic, Lutris, Bottles, Wine…) e pregúntache en cal das copias o pon. Se o tes noutro sitio, escolle «0» e indícalle a carpeta; vale tamén unha que a conteña, como o disco onde o gardas."
     - "Abre o xogo: xa sae en galego. Se non, escolle Galego en *Opcións > Xogo > Idioma*."
     - "Para volver ao inglés: `bash desinstalar.sh`."
-  nota: "O instalador arranxa tamén un fallo do propio xogo en Linux: tal como o abre Steam, pecha de súpeto ao gardar unha partida cun nome con til ou ao premer teclas coma «º». Se Steam actualiza ou verifica o xogo e volve o inglés, abonda con executar outra vez `instalar.sh`. Para cambiar dun paquete ao outro, instala o novo por riba. En Windows debería valer copiando o contido da carpeta `datos` dentro da do xogo, pero non está probado."
+  nota: "O instalador arranxa tamén un fallo do propio xogo en Linux: tal como o abre Steam, pecha de súpeto ao gardar unha partida cun nome con til ou ao premer teclas coma «º». Se o xogo se actualiza ou se verifica e volve o inglés, abonda con executar outra vez `instalar.sh`. Para cambiar dun paquete ao outro, instala o novo por riba. Coa versión de Windows o idioma escóllese a man no menú e, antes de desinstalar, hai que volver poñer *English* nese mesmo menú."
 
 descargas:
   - nome: "Con dobraxe galega"
-    nota: "Versión 0.9 (.zip, 10 MB). Textos, carteis e voces"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9/Penumbra-Overture-en-galego-0.9-dobraxe.zip"
+    nota: "Versión 0.9.1 (.zip, 10 MB). Textos, carteis e voces"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.1/Penumbra-Overture-en-galego-0.9.1-dobraxe.zip"
     destacada: true
   - nome: "Só textos"
-    nota: "Versión 0.9 (.zip, 2,3 MB). Voces orixinais en inglés"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9/Penumbra-Overture-en-galego-0.9.zip"
+    nota: "Versión 0.9.1 (.zip, 2,3 MB). Voces orixinais en inglés"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.1/Penumbra-Overture-en-galego-0.9.1.zip"
 
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA (Gemini e Claude)"]

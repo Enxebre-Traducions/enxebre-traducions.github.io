@@ -18,6 +18,7 @@ vale para todo o xogo e non hai que tocar nin un punteiro.
 | `mkbps.py` | Xera un parche BPS con sumas CRC32 e comproba que reproduce a ROM destino |
 | `applyips.py` | Aplica un parche IPS (útil para reconstruír a ROM base doutra tradución) |
 | `iconos.py` | Debuxa en pixel art o icono da web (o mando coa bandeira) e escribe o logo e o favicon: `python3 ferramentas/iconos.py mando` |
+| `escoller_xogo.sh` | A busca do xogo común a todos os instaladores de PC (só Linux): mira en Steam, Heroic, Lutris, Bottles, Wine e `~/Games`, pregunta en cal das copias e deixa escoller outra carpeta (busca dentro dela). Cada empaquetador métea tal cal no `instalar.sh`; as instrucións van na cabeceira |
 
 ## Fluxo
 
