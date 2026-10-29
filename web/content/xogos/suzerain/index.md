@@ -37,7 +37,7 @@ sen_traducir:
 
 rom:
   nome: "Suzerain 3.1.0, probada coa versión de Steam"
-  nota: "En Linux ou Steam Deck, co xogo funcionando con Proton, Wine, Heroic, Lutris ou Bottles. Vale tamén unha copia doutra tenda, como GOG, aínda sen probar: o que non coincida coa de Steam queda en inglés e o instalador avisa. O instalador non trae ningún ficheiro do xogo: traduce o teu."
+  nota: "En Linux ou Steam Deck, co xogo funcionando con Proton, Wine, Heroic, Lutris ou Bottles. O instalador recoñece a versión de Steam coa que se probou; con calquera outra copia (doutra tenda, como GOG, ou doutra versión) avisa e pregunta antes de tocar nada, porque iso aínda non o probou ninguén. Non trae ningún ficheiro do xogo: traduce o teu."
 
 instalador:
   onde: "Linux e Steam Deck"
@@ -65,6 +65,6 @@ Está traducida toda a historia de Sordland, que é o xogo base. Fíxose con int
 
 A versión 1.0 corrixe os dous erros que se atoparon ao xogala enteira: as palabras resaltadas saían entre asteriscos (\*así\*) en vez de entre comiñas (“así”), e moitas frases empezaban por «Bo,» onde en galego se di «Ben,». Se tes posta a 0.9, abonda con instalar a 1.0 por riba.
 
-A 1.0.1 trae a mesma tradución cun instalador novo: xa non fai falta que o xogo sexa de Steam, porque o busca tamén en Heroic, Lutris, Bottles e Wine, e deixa escoller calquera outra carpeta. Se tes posta a 1.0, non tes que facer nada.
+A 1.0.1 trae a mesma tradución cun instalador novo: xa non fai falta que o xogo sexa de Steam, porque o busca tamén en Heroic, Lutris, Bottles e Wine, e deixa escoller calquera outra carpeta. Se a copia non é a versión coa que se probou, avisa e pregunta antes. Se tes posta a 1.0, non tes que facer nada.
 
 Se tes posta a tradución ao castelán, o instalador galego aproveita os ficheiros orixinais que gardou ela. Para pasar do galego ao castelán, desinstala antes o galego.

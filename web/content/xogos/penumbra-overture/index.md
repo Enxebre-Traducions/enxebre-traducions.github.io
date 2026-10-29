@@ -49,7 +49,7 @@ sen_traducir:
 
 rom:
   nome: "Penumbra: Overture, probada coa versión de Steam para Linux"
-  nota: "Vale tamén a versión para Linux doutra tenda e a de Windows xogada con Wine, Proton, Heroic, Lutris ou Bottles (a de GOG, por exemplo), aínda sen probar. O paquete non trae o xogo: precisas telo instalado."
+  nota: "O instalador recoñece esa versión; con calquera outra (a de Linux doutra tenda ou a de Windows xogada con Wine, Proton, Heroic, Lutris ou Bottles, como a de GOG) avisa e pregunta antes de tocar nada, porque iso aínda non o probou ninguén. O paquete non trae o xogo: precisas telo instalado."
 
 instalador:
   onde: "Linux"
@@ -59,7 +59,7 @@ instalador:
     - "Abre unha terminal dentro da carpeta e executa `bash instalar.sh`. Busca Penumbra: Overture el só (Steam, Heroic, Lutris, Bottles, Wine…) e pregúntache en cal das copias o pon. Se o tes noutro sitio, escolle «0» e indícalle a carpeta; vale tamén unha que a conteña, como o disco onde o gardas."
     - "Abre o xogo: xa sae en galego. Se non, escolle Galego en *Opcións > Xogo > Idioma*."
     - "Para volver ao inglés: `bash desinstalar.sh`."
-  nota: "O instalador arranxa tamén un fallo do propio xogo en Linux: tal como o abre Steam, pecha de súpeto ao gardar unha partida cun nome con til ou ao premer teclas coma «º». Se o xogo se actualiza ou se verifica e volve o inglés, abonda con executar outra vez `instalar.sh`. Para cambiar dun paquete ao outro, instala o novo por riba. Coa versión de Windows o idioma escóllese a man no menú e, antes de desinstalar, hai que volver poñer *English* nese mesmo menú."
+  nota: "O instalador arranxa tamén un fallo do propio xogo en Linux: tal como o abre Steam, pecha de súpeto ao gardar unha partida cun nome con til ou ao premer teclas coma «º». Se o xogo se actualiza ou se verifica e volve o inglés, abonda con executar outra vez `instalar.sh`. Para cambiar dun paquete ao outro, instala o novo por riba. Coa versión de Windows o idioma escóllese a man no menú e, antes de desinstalar, hai que volver poñer *English* nese mesmo menú. Tamén se pode poñer a man: copia o contido da carpeta `datos` dentro da do xogo e escolle Galego no menú; coa versión de Steam para Linux, mellor co instalador, que arranxa o lanzador."
 
 descargas:
   - nome: "Con dobraxe galega"

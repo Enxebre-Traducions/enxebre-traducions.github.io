@@ -9,6 +9,8 @@
 #                 («Suzerain_Data», «config/English.lang»)
 #   e_o_xogo DIR  función: correcta se DIR é de verdade a carpeta do xogo
 # e despois:  XOGO="$(escoller_xogo "${1:-}")" || fallo "..."
+# Para preguntar antes de seguir (por exemplo, se a copia non é a versión probada):
+#              xogo_confirmar "Instalar igualmente? Escribe s e preme Intro: " || fallo "..."
 #
 # Sen argumento busca en Steam, Heroic (GOG, Epic, Amazon e os engadidos a man), o lanzador de Epic,
 # Lutris, Bottles, Wine, itch e ~/Games, e deixa escoller entre o atopado ou outra carpeta (cunha xanela
@@ -84,6 +86,13 @@ _xogo_ler() {  # _xogo_ler VARIABLE PREGUNTA: le unha liña da terminal; falla s
     local _resposta
     IFS= read -r -e -p "$2" _resposta || return 1
     printf -v "$1" '%s' "$_resposta"
+}
+
+xogo_confirmar() {  # xogo_confirmar PREGUNTA: correcta só se responde «s»; sen terminal, non
+    local resposta=""
+    _xogo_ler resposta "$1" || return 1
+    resposta="${resposta//[[:space:]]/}"
+    case "${resposta,,}" in s | si | sí) return 0 ;; *) return 1 ;; esac
 }
 
 _xogo_elixir() {  # _xogo_elixir CARPETAS ORIXES: menú numerado, co 0 para outra carpeta
