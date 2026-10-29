@@ -44,10 +44,10 @@ instalador:
   pasos:
     - "Descarga o paquete e descomprímeo onde queiras."
     - "Pecha o xogo."
-    - "Abre unha terminal dentro da carpeta e executa `bash instalar.sh`. Busca Suzerain el só (Steam, Heroic, Lutris, Bottles, Wine…) e pregúntache en cal das copias o pon. Se o tes noutro sitio, escolle «0» e indícalle a carpeta; vale tamén unha que a conteña, como o disco onde o gardas."
+    - "Fai dobre clic en `instalar.sh` (se pregunta que facer, escolle *Executar*). Ábrese unha xanela de terminal onde só tes que ir respondendo: busca Suzerain el só (Steam, Heroic, Lutris, Bottles, Wine…) e pregúntache en cal das copias o pon; escribe o número e preme Intro. Se o tes noutro sitio, escolle «0» e indícalle a carpeta; vale tamén unha que a conteña, como o disco onde o gardas."
     - "Abre Suzerain. Vale tamén coas partidas xa empezadas."
-    - "Para volver ao inglés: `bash desinstalar.sh`."
-  nota: "A primeira vez descarga UnityPy (uns 30 MB), a ferramenta que edita os ficheiros do xogo, e gárdaa aparte. Se o xogo se actualiza e volve o inglés, abonda con executar outra vez `instalar.sh`. Na Steam Deck faise desde o modo escritorio, coa aplicación Konsole."
+    - "Para volver ao inglés: dobre clic en `desinstalar.sh`."
+  nota: "A primeira vez descarga UnityPy (uns 30 MB), a ferramenta que edita os ficheiros do xogo, e gárdaa aparte. Se o xogo se actualiza e volve o inglés, abonda con executar outra vez `instalar.sh`. Na Steam Deck faise desde o modo escritorio. Se o dobre clic abre o texto do ficheiro en vez de executalo (pasa en GNOME), fai clic dereito nel e escolle executalo como programa, ou abre unha terminal na carpeta e escribe `bash instalar.sh`."
 
 descargas:
   - nome: "Instalador para Linux"

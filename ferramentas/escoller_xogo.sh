@@ -8,6 +8,8 @@
 #   XOGO_MARCA    ruta que leva o xogo, relativa á súa carpeta, para buscalo con find
 #                 («Suzerain_Data», «config/English.lang»)
 #   e_o_xogo DIR  función: correcta se DIR é de verdade a carpeta do xogo
+# Xusto despois do bloque (fóra das marcas, para que o desinstalador non o colla):
+#              xogo_abrir_terminal "$AQUI/instalar.sh" "$@"
 # e despois:  XOGO="$(escoller_xogo "${1:-}")" || fallo "..."
 # Para preguntar antes de seguir (por exemplo, se a copia non é a versión probada):
 #              xogo_confirmar "Instalar igualmente? Escribe s e preme Intro: " || fallo "..."
@@ -88,6 +90,40 @@ _xogo_ler() {  # _xogo_ler VARIABLE PREGUNTA: le unha liña da terminal; falla s
     printf -v "$1" '%s' "$_resposta"
 }
 
+xogo_abrir_terminal() {  # xogo_abrir_terminal GUION [ARGUMENTOS]: se o abriron con dobre clic (sen terminal),
+                         # volve abrir o guion nunha xanela de terminal, que espera un Intro antes de pecharse
+    local t msg
+    local -a orde=()
+    if [ -n "${ENXEBRE_XANELA:-}" ]; then
+        trap 'echo; echo "Preme Intro para pechar esta xanela."; read -r _ || true' EXIT
+        return 0
+    fi
+    if [ -t 0 ] || [ -t 1 ] || [ -t 2 ] || [ -z "${WAYLAND_DISPLAY:-}${DISPLAY:-}" ]; then return 0; fi
+    case "${XDG_CURRENT_DESKTOP:-}" in
+        *KDE*) orde=(konsole) ;;
+        *GNOME*) orde=(kgx ptyxis gnome-terminal) ;;
+        *XFCE*) orde=(xfce4-terminal) ;;
+        *MATE*) orde=(mate-terminal) ;;
+        *LXQt*) orde=(qterminal) ;;
+    esac
+    orde+=(xdg-terminal-exec x-terminal-emulator konsole kgx ptyxis gnome-terminal xfce4-terminal
+           mate-terminal qterminal terminator alacritty kitty foot wezterm xterm)
+    for t in "${orde[@]}"; do
+        if ! command -v "$t" >/dev/null 2>&1; then continue; fi
+        case "$t" in
+            xdg-terminal-exec | kitty | foot) exec "$t" env ENXEBRE_XANELA=1 bash "$@" ;;
+            kgx | ptyxis | gnome-terminal) exec "$t" -- env ENXEBRE_XANELA=1 bash "$@" ;;
+            xfce4-terminal | mate-terminal | terminator) exec "$t" -x env ENXEBRE_XANELA=1 bash "$@" ;;
+            wezterm) exec "$t" start -- env ENXEBRE_XANELA=1 bash "$@" ;;
+            *) exec "$t" -e env ENXEBRE_XANELA=1 bash "$@" ;;
+        esac
+    done
+    # sen ningunha terminal, polo menos que se vexa o porqué
+    msg="Non atopo ningunha terminal. Abre unha nesta carpeta e escribe: bash ${1##*/}"
+    kdialog --error "$msg" 2>/dev/null || zenity --error --text="$msg" 2>/dev/null || true
+    exit 1
+}
+
 xogo_confirmar() {  # xogo_confirmar PREGUNTA: correcta só se responde «s»; sen terminal, non
     local resposta=""
     _xogo_ler resposta "$1" || return 1
@@ -97,14 +133,16 @@ xogo_confirmar() {  # xogo_confirmar PREGUNTA: correcta só se responde «s»; s
 
 _xogo_elixir() {  # _xogo_elixir CARPETAS ORIXES: menú numerado, co 0 para outra carpeta
     local -n _carpetas="$1" _orixes="$2"
-    local i n resposta
+    local i n resposta ver
     echo >&2
     echo "Atopei $XOGO_NOME en:" >&2
     for i in "${!_carpetas[@]}"; do
+        # a carpeta persoal como ~, que se le mellor
+        ver="${_carpetas[$i]/#"$HOME"\//\~/}"
         if [ -n "${_orixes[$i]}" ]; then
-            printf '  %d) %s   [%s]\n' $((i + 1)) "${_carpetas[$i]}" "${_orixes[$i]}" >&2
+            printf '  %d) %s   [%s]\n' $((i + 1)) "$ver" "${_orixes[$i]}" >&2
         else
-            printf '  %d) %s\n' $((i + 1)) "${_carpetas[$i]}" >&2
+            printf '  %d) %s\n' $((i + 1)) "$ver" >&2
         fi
     done
     echo "  0) Está noutra carpeta" >&2
