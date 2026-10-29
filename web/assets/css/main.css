@@ -232,46 +232,64 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .heroe-entrada { font-size: clamp(1.08rem, 1.6vw, 1.22rem); color: var(--tinta-suave); max-width: 50ch; margin-bottom: 1.8em; }
 .heroe-botons { display: flex; flex-wrap: wrap; gap: 12px; }
 .heroe-cifras { display: flex; flex-wrap: wrap; gap: 12px 36px; margin: 2.4em 0 0; }
-.heroe-cifras div { display: flex; flex-direction: column-reverse; }
+.heroe-cifras div { display: flex; flex-direction: column-reverse; justify-content: flex-end; }
 .heroe-cifras dt { font-size: .86rem; color: var(--tinta-tenue); }
 .heroe-cifras dd { margin: 0; font-family: var(--letra-titulos); font-size: 2rem; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; }
+@media (max-width: 520px) {
+  .heroe-cifras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 18px; }
+  .heroe-cifras dd { font-size: 1.7rem; }
+}
 
-/* Monitor CRT con pantalla de título que alterna orixinal / galego */
-.crt { display: block; text-decoration: none; color: var(--tinta-tenue); justify-self: end; width: min(100%, 470px); }
-.crt-pantalla {
-  position: relative; aspect-ratio: 256 / 240; border-radius: 22px; overflow: hidden;
+/* Escaparate: capturas en galego de todas as fichas, unha tras outra (sitio.js).
+   Sen JS vese só a primeira. */
+.escaparate { justify-self: end; width: min(100%, 520px); }
+.escaparate-diapos { display: grid; }
+.escaparate-diapo { grid-area: 1 / 1; display: block; text-decoration: none; color: var(--tinta-tenue); transition: opacity .7s ease, visibility .7s; }
+.escaparate-diapo:hover { color: var(--tinta-suave); }
+.escaparate[data-listo] .escaparate-diapo:not(.activa) { opacity: 0; visibility: hidden; }
+.escaparate-pantalla {
+  position: relative; display: block; aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden;
   background: #000; border: 12px solid #1b1f27;
   box-shadow: 0 0 0 1px #2b313d, inset 0 0 0 1px #000, var(--sombra-forte), 0 0 80px -20px color-mix(in srgb, var(--acento) 55%, transparent);
   transform: rotate(1.2deg); transition: transform .4s ease;
 }
-.crt:hover .crt-pantalla { transform: rotate(0deg) scale(1.01); }
-.crt-pantalla img { position: absolute; inset: 0; width: 100%; height: 100%; }
-.crt-pantalla::after {
+.escaparate-diapo:hover .escaparate-pantalla { transform: rotate(0deg) scale(1.01); }
+.escaparate-pantalla img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity .3s ease; }
+.escaparate-diapo.encher .escaparate-pantalla img { object-fit: cover; }
+/* as liñas do CRT só no pixel art: nas capturas de PC estorbarían para ler */
+.escaparate-diapo.pixelada .escaparate-pantalla::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
     repeating-linear-gradient(to bottom, rgb(0 0 0 / .22) 0 1px, transparent 1px 3px),
     radial-gradient(ellipse at center, transparent 58%, rgb(0 0 0 / .45) 100%);
 }
-.crt-gl { animation: alternar 7s steps(1, end) infinite; }
 .crt-etiqueta {
   position: absolute; right: 12px; bottom: 12px; z-index: 2;
   font: 400 .72rem/1 var(--letra-pixel); text-transform: uppercase; letter-spacing: .05em;
   padding: .55em .7em; border-radius: 6px; background: rgb(0 0 0 / .72); color: #fff;
+  transition: opacity .3s ease;
 }
-.crt-etiqueta-gl { background: var(--acento); color: var(--sobre-acento); animation: alternar 7s steps(1, end) infinite; }
-.crt-etiqueta-en { animation: alternar-inverso 7s steps(1, end) infinite; }
-/* primeiro o galego (0-60 %), despois o orixinal */
-@keyframes alternar { 0% { opacity: 1; } 60% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes alternar-inverso { 0% { opacity: 0; } 60% { opacity: 1; } 100% { opacity: 1; } }
+.crt-etiqueta-gl { background: var(--acento); color: var(--sobre-acento); }
+/* nas que teñen parella no comparador, o orixinal un momento e despois o galego */
+.escaparate-en, .escaparate-etiqueta-en { opacity: 0; }
+.amosa-orixinal .escaparate-en, .amosa-orixinal .escaparate-etiqueta-en { opacity: 1; }
+.amosa-orixinal .escaparate-gl, .amosa-orixinal .escaparate-etiqueta-gl { opacity: 0; }
+.escaparate-pe { display: block; text-align: center; margin-top: 18px; font-size: .9rem; }
+.escaparate-puntos { display: flex; justify-content: center; gap: 2px; margin-top: 6px; }
+.escaparate-puntos button { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer; }
+.escaparate-puntos button::before {
+  content: ""; width: 8px; height: 8px; border-radius: 4px;
+  background: color-mix(in srgb, var(--tinta) 25%, transparent); transition: width .3s, background-color .3s;
+}
+.escaparate-puntos button[aria-current="true"]::before { width: 22px; background: var(--acento); }
+.escaparate-puntos button:hover::before { background: var(--acento); }
 @media (prefers-reduced-motion: reduce) {
-  .crt-gl, .crt-etiqueta-gl { animation: none; opacity: 1; }
-  .crt-etiqueta-en { animation: none; opacity: 0; }
+  .escaparate-diapo, .escaparate-pantalla, .escaparate-pantalla img, .crt-etiqueta { transition: none; }
 }
-.crt-pe { display: block; text-align: center; margin-top: 18px; font-size: .9rem; }
 
 @media (max-width: 860px) {
   .heroe-grella { grid-template-columns: 1fr; }
-  .crt { justify-self: center; width: min(100%, 400px); }
+  .escaparate { justify-self: center; width: min(100%, 460px); }
 }
 
 /* ---------- Seccións ---------- */
@@ -317,12 +335,14 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .tarxeta-imaxe img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .tarxeta-imaxe.pixelada img { object-fit: contain; }
 .tarxeta:hover .tarxeta-imaxe img { transform: scale(1.03); }
+.tarxeta-chips { position: absolute; left: 12px; top: 12px; right: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
 .tarxeta-sistema {
-  position: absolute; left: 12px; top: 12px;
   font: 400 .72rem/1 var(--letra-pixel); text-transform: uppercase; letter-spacing: .05em;
   padding: .55em .7em; border-radius: 6px; background: rgb(0 0 0 / .75); color: #fff;
   backdrop-filter: blur(6px);
 }
+/* os parches de PC son só para Linux: dise con orgullo */
+.tarxeta-linux { background: rgb(10 111 180 / .9); }
 .tarxeta-corpo { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 20px; }
 .tarxeta-titulo { font-size: 1.4rem; margin-bottom: .15em; }
 .tarxeta-meta { font-size: .88rem; color: var(--tinta-tenue); margin-bottom: .7em; }
@@ -369,6 +389,27 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 }
 .aviso-erro h2 { margin-bottom: .3em; }
 .aviso-erro p { color: var(--tinta-suave); margin: 0; max-width: 52ch; }
+
+.avisos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 20px; }
+
+/* ---------- Novidades ---------- */
+
+.novidades { border-block: 1px solid var(--raia); background: var(--superficie); }
+.novidades-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; padding-block: 14px; }
+.novidades-titulo { font: 400 .78rem/1 var(--letra-pixel); text-transform: uppercase; letter-spacing: .06em; color: var(--acento); margin: 0; }
+.novidades-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 28px; flex: 1; }
+.novidades-lista a { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .2em .55em; text-decoration: none; color: var(--tinta); font-size: .94rem; }
+.novidades-lista a:hover .novidades-xogo { color: var(--acento); }
+.novidades-lista time { font-size: .82rem; color: var(--tinta-tenue); }
+.novidades-xogo { font-weight: 600; transition: color .2s; }
+.novidades-sistema { align-self: center; font: 400 .64rem/1 var(--letra-pixel); text-transform: uppercase; padding: .35em .5em; border-radius: 5px; background: var(--fondo-alterno); color: var(--tinta-suave); }
+.novidades-rss { display: inline-flex; align-items: center; gap: .35em; font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--tinta-suave); }
+.novidades-rss svg { width: 1em; height: 1em; color: #e8892c; }
+@media (max-width: 760px) {
+  .novidades-fila { flex-direction: column; align-items: flex-start; }
+  .novidades-lista { flex-direction: column; gap: 10px; }
+  .novidades-lista time { flex-basis: 100%; }
+}
 
 /* ---------- Ficha ---------- */
 

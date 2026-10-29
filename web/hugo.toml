@@ -6,7 +6,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  descricion = "Videoxogos clásicos traducidos ao galego. Só parches: ti pos o xogo e o parche aplícase aquí mesmo, no teu navegador."
+  descricion = "Videoxogos traducidos ao galego, dos clásicos de consola aos de PC para Linux. Ti pos o xogo, nós o galego: aquí só hai traducións."
   repo = "https://github.com/enxebre-traducions/enxebre-traducions.github.io"
 
   # Doazóns: a ligazón de PayPal (paypal.me/... ou a de «Doar» de PayPal).

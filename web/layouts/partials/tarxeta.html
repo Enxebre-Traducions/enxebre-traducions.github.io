@@ -5,7 +5,11 @@
       {{ with .Resources.Get .Params.portada }}
       <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }} en galego" loading="lazy">
       {{ end }}
-      <span class="tarxeta-sistema">{{ .Params.sistema }}</span>
+      <span class="tarxeta-chips">
+        <span class="tarxeta-sistema">{{ .Params.sistema }}</span>
+        {{/* os parches de PC son só para Linux (decisión do proxecto) */}}
+        {{ if eq .Params.sistema "PC" }}<span class="tarxeta-sistema tarxeta-linux">Linux · Steam Deck</span>{{ end }}
+      </span>
     </div>
     <div class="tarxeta-corpo">
       <h3 class="tarxeta-titulo">{{ .Title }}</h3>

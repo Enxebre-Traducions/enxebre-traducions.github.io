@@ -31,7 +31,7 @@ Garda sempre unha copia da ROM orixinal. O parche aplícase sobre unha copia e, 
 
 ## Xogos de PC
 
-Nos xogos de PC non hai ROM: a tradución vén cun instalador que traduce os ficheiros da túa instalación de Steam e garda unha copia dos orixinais para poder desfacelo. As instrucións están en cada ficha.
+Nos xogos de PC non hai ROM: a tradución vén cun instalador para Linux (tamén para a Steam Deck) que se abre con dobre clic. Busca o xogo el só en Steam, Heroic, Lutris, Bottles, Wine e `~/Games`, ou deixa escoller a carpeta onde o teñas, e traduce os ficheiros da túa copia gardando os orixinais para poder desfacelo. Se a túa copia non é a versión coa que se probou a tradución, avisa e pregunta antes de tocar nada. As instrucións están en cada ficha.
 
 ## E onde consigo o xogo?
 

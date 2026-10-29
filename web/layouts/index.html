@@ -1,37 +1,87 @@
 {{ define "main" }}
 {{ $xogos := (where site.RegularPages "Section" "xogos").ByDate.Reverse }}
 {{ $probadas := where $xogos "Params.probada" true }}
-{{ $castlevania := site.GetPage "/xogos/castlevania-nes" }}
+
+{{/* Escaparate: de cada xogo, a portada (sempre ten que amosar o galego) e as capturas que a ficha
+     poña en «escaparate», cos xogos máis novos primeiro. Se a imaxe ten a súa parella no comparador
+     da ficha, ensínase un momento o orixinal antes do galego. */}}
+{{ $diapos := slice }}
+{{ range $xogos }}
+  {{ $xogo := . }}
+  {{ $rutas := slice .Params.portada }}
+  {{ with .Params.escaparate }}{{ $rutas = $rutas | append . }}{{ end }}
+  {{ range $rutas }}
+    {{ $ruta := . }}
+    {{ with $xogo.Resources.Get $ruta }}
+      {{ $en := "" }}
+      {{ range $xogo.Params.comparacions }}{{ if eq .galego $ruta }}{{ $en = $xogo.Resources.Get .orixinal }}{{ end }}{{ end }}
+      {{ $diapos = $diapos | append (dict "xogo" $xogo "gl" . "en" $en) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 <section class="heroe">
   <div class="envoltorio heroe-grella">
     <div class="heroe-texto">
-      <p class="antetitulo">Romhacking en galego</p>
-      <h1>Os clásicos de sempre, agora <em>en galego</em>.</h1>
-      <p class="heroe-entrada">Traducimos videoxogos ao galego, da NES ao PC. Aquí só hai parches: ti pos o xogo, e o parche aplícase no teu navegador sen instalar nada.</p>
+      <p class="antetitulo">Traducións de videoxogos</p>
+      <h1>Ti pos o xogo,<br> nós <em>o&nbsp;galego</em>.</h1>
+      <p class="heroe-entrada">Traducimos videoxogos ao galego, sexan clásicos de consola ou xogos de PC. Aquí non hai xogos, só a tradución: nos de consola, o parche aplícase no teu navegador; nos de PC, un instalador para Linux faino por ti.</p>
       <div class="heroe-botons">
         <a class="boton boton-primario" href="#xogos">Ver as traducións</a>
-        <a class="boton boton-secundario" href="{{ "como-parchear/" | relURL }}">Como funciona</a>
+        <a class="boton boton-secundario" href="#como-funciona">Como funciona</a>
       </div>
       <dl class="heroe-cifras">
         <div><dt>Traducións</dt><dd>{{ len $xogos }}</dd></div>
         <div><dt>Probadas por humanos</dt><dd>{{ len $probadas }}</dd></div>
-        <div><dt>ROMs distribuídas</dt><dd>0</dd></div>
+        <div><dt>Xogos distribuídos</dt><dd>0</dd></div>
       </dl>
     </div>
-    {{ with $castlevania }}
-    {{ $en := .Resources.Get "capturas/titulo-en.png" }}
-    {{ $gl := .Resources.Get "capturas/titulo-gl.png" }}
-    <a class="crt" href="{{ .RelPermalink }}" aria-label="Castlevania: pantalla de título en inglés e en galego">
-      <div class="crt-pantalla pixelada">
-        <img class="crt-en" src="{{ $en.RelPermalink }}" width="256" height="240" alt="">
-        <img class="crt-gl" src="{{ $gl.RelPermalink }}" width="256" height="240" alt="">
-        <span class="crt-etiqueta crt-etiqueta-en">Orixinal</span>
-        <span class="crt-etiqueta crt-etiqueta-gl">Galego</span>
+    {{ with $diapos }}
+    <div class="escaparate" data-escaparate role="region" aria-roledescription="carrusel" aria-label="Capturas dos xogos en galego">
+      <div class="escaparate-diapos">
+        {{ range $i, $d := . }}
+        {{ $x := $d.xogo }}
+        {{ $gl := $d.gl }}
+        {{ $proporcion := div (float $gl.Width) $gl.Height }}
+        {{ $imx := $gl }}
+        {{ if gt $gl.Width 1000 }}{{ $imx = $gl.Resize "1000x webp q82" }}{{ end }}
+        <a class="escaparate-diapo{{ if $x.Params.pixelada }} pixelada{{ end }}{{ if and (ge $proporcion 1.45) (le $proporcion 1.85) }} encher{{ end }}{{ if $d.en }} con-orixinal{{ end }}{{ if not $i }} activa{{ end }}"
+           href="{{ $x.RelPermalink }}" data-diapo data-titulo="{{ $x.Title }}"{{ if $i }} hidden{{ end }}>
+          <span class="escaparate-pantalla">
+            {{ with $d.en }}<img class="escaparate-en" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">{{ end }}
+            <img class="escaparate-gl" src="{{ $imx.RelPermalink }}" width="{{ $imx.Width }}" height="{{ $imx.Height }}" alt="{{ $x.Title }} en galego"{{ if $i }} loading="lazy"{{ end }}>
+            {{ with $d.en }}<span class="crt-etiqueta escaparate-etiqueta-en">Orixinal</span>{{ end }}
+            <span class="crt-etiqueta crt-etiqueta-gl escaparate-etiqueta-gl">Galego</span>
+          </span>
+          <span class="escaparate-pe">{{ $x.Title }} · {{ $x.Params.sistema }}</span>
+        </a>
+        {{ end }}
       </div>
-      <span class="crt-pe">Castlevania · NES</span>
-    </a>
+      <div class="escaparate-puntos" data-puntos hidden></div>
+    </div>
     {{ end }}
+  </div>
+</section>
+
+{{/* Só os xogos novos, non as súas actualizacións: a data da ficha é a do día en que saíu */}}
+<section class="novidades" aria-labelledby="novidades">
+  <div class="envoltorio novidades-fila">
+    <h2 id="novidades" class="novidades-titulo">Novidades</h2>
+    <ol class="novidades-lista">
+      {{ range first 3 $xogos }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+          <span class="novidades-xogo">{{ .Title }}</span>
+          <span class="novidades-sistema">{{ .Params.sistema }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ol>
+    <a class="novidades-rss" href="{{ "index.xml" | relURL }}" title="Avisos dos xogos novos no teu lector de RSS">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm-1.5-8.5a9 9 0 0 1 9 9h-3a6 6 0 0 0-6-6v-3Zm0-6a15 15 0 0 1 15 15h-3a12 12 0 0 0-12-12v-3Z" fill="currentColor"/></svg>
+      RSS
+    </a>
   </div>
 </section>
 
@@ -40,7 +90,7 @@
     <div class="seccion-cabeceira">
       <div>
         <h2>Traducións</h2>
-        <p class="seccion-entrada">Cada ficha leva as capturas, a ROM exacta que precisas, o parcheador e os comentarios.</p>
+        <p class="seccion-entrada">Cada ficha leva as capturas, o xogo exacto que precisas, o parcheador ou o instalador, e os comentarios.</p>
       </div>
       {{ partial "filtros.html" $xogos }}
     </div>
@@ -68,31 +118,38 @@
   </div>
 </section>
 
-<section class="seccion">
+<section class="seccion" id="como-funciona">
   <div class="envoltorio">
     <h2>Como funciona</h2>
     <ol class="pasos">
       <li>
         <span class="paso-num">1</span>
         <h3>Consegue o xogo</h3>
-        <p>Precisas a túa propia copia: unha ROM ou o xogo comprado en Steam. Cada ficha di exactamente cal, porque a versión importa.</p>
+        <p>Precisas a túa propia copia: a ROM, nos xogos de consola, ou o xogo instalado, nos de PC, sexa de Steam ou doutra tenda. Cada ficha di con que versión se probou, porque a versión importa.</p>
       </li>
       <li>
         <span class="paso-num">2</span>
-        <h3>Aplica o parche</h3>
-        <p>Arrastra a ROM ao parcheador da ficha. Compróbase que é a correcta e devólvese traducida. Non sae do teu ordenador en ningún momento.</p>
+        <h3>Pon a tradución</h3>
+        <p><strong>Consola:</strong> arrastra a ROM ao parcheador da ficha, que comproba que é a correcta e devólvea traducida sen que saia do teu ordenador. <strong>PC:</strong> descarga o instalador para Linux e fai dobre clic; busca o xogo el só.</p>
       </li>
       <li>
         <span class="paso-num">3</span>
         <h3>Xoga</h3>
-        <p>No teu emulador de sempre ou, nos xogos de NES, aquí mesmo no navegador, co teclado ou cun mando.</p>
+        <p><strong>Consola:</strong> no teu emulador de sempre ou, nos xogos de NES, aquí mesmo no navegador. <strong>PC:</strong> como sempre, desde Steam ou o teu lanzador, xa en galego.</p>
       </li>
     </ol>
   </div>
 </section>
 
 <section class="seccion">
-  <div class="envoltorio">
+  <div class="envoltorio avisos">
+    <div class="aviso-erro">
+      <div>
+        <h2>Queres un xogo en galego?</h2>
+        <p>Dinos cal. Non prometemos nada, pero miramos todas as peticións e axúdannos a escoller o seguinte.</p>
+      </div>
+      <a class="boton boton-primario" href="{{ site.Params.repo }}/issues/new?template=pedir-xogo.yml">Pedir un xogo</a>
+    </div>
     <div class="aviso-erro">
       <div>
         <h2>Atopaches un erro?</h2>

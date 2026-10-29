@@ -1,14 +1,18 @@
 # Enxebre Traducións
 
-Traducións de videoxogos ao **galego** (norma RAG).
-Aquí só se distribúen **parches**: as ROMs non se inclúen nin se van incluír.
+**Ti pos o xogo, nós o galego.** Traducións de videoxogos ao **galego**
+(norma RAG), dos clásicos de consola aos xogos de PC.
+Aquí só se distribúen **traducións**: parches para as ROMs e instaladores
+para Linux nos xogos de PC. Nin as ROMs nin os xogos se inclúen nin se van incluír.
 
 🌐 **Web: <https://enxebre-traducions.github.io/>** — cada xogo
-coas súas capturas, un parcheador que funciona no navegador e comentarios.
+coas súas capturas, o parcheador que funciona no navegador ou o instalador,
+e comentarios.
 
-*Traducciones de videojuegos al **gallego** (norma RAG). Aquí solo se
-distribuyen **parches**: las ROMs no se incluyen ni se van a incluir. La web
-tiene un parcheador que funciona en el navegador.*
+*Traducciones de videojuegos al **gallego** (norma RAG), de los clásicos de
+consola a los juegos de PC. Aquí solo se distribuyen **traducciones**: parches
+para las ROMs e instaladores para Linux en los juegos de PC; ni las ROMs ni
+los juegos se incluyen ni se van a incluir.*
 
 ---
 

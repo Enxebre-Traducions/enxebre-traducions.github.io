@@ -1,0 +1,19 @@
+{{/* Imaxe para compartir a portada (og:image, 1200x630): a base que debuxa ferramentas/compartir.py
+     coas portadas dos catro xogos máis novos enriba. Devolve a imaxe xa procesada. */}}
+{{ $imaxe := resources.Get "compartir/base.png" }}
+{{ $marco := resources.Get "compartir/marco.png" }}
+{{ $xogos := first 4 (where site.RegularPages "Section" "xogos").ByDate.Reverse }}
+{{ range $i, $x := $xogos }}
+  {{ with $x.Resources.Get $x.Params.portada }}
+    {{ $portada := . }}
+    {{ if and $x.Params.pixelada (ge .Width 252) (ge .Height 158) }}
+      {{/* pixel art: recórtase sen escalar, para que non se borre */}}
+      {{ $portada = .Crop "252x158 Center png" }}
+    {{ else }}
+      {{ $portada = .Fill "252x158 Center Lanczos png" }}
+    {{ end }}
+    {{ $esquerda := add 72 (mul $i 268) }}
+    {{ $imaxe = $imaxe.Filter (images.Overlay $portada $esquerda 392) (images.Overlay $marco $esquerda 392) }}
+  {{ end }}
+{{ end }}
+{{ return $imaxe.Process "jpg q86" }}

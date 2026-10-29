@@ -1,0 +1,48 @@
+name: Pedir un xogo
+description: Gustaríache xogar en galego a algún xogo? Dinos cal
+title: "[Petición] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazas pola idea! Non prometemos nada: miramos todas as peticións e escollemos segundo o tempo que leva cada xogo e o que se pode facer con el. Ás veces o xogo garda os textos de xeito que non se poden cambiar sen romper nada.
+  - type: input
+    id: xogo
+    attributes:
+      label: Que xogo?
+      placeholder: "Por exemplo: Chrono Trigger, Disco Elysium…"
+    validations:
+      required: true
+  - type: dropdown
+    id: sistema
+    attributes:
+      label: Sistema
+      options:
+        - PC
+        - NES
+        - Super Nintendo
+        - Mega Drive
+        - Game Boy / Game Boy Color
+        - Game Boy Advance
+        - PlayStation
+        - Nintendo 64
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: onde
+    attributes:
+      label: Onde o tes?
+      description: "Opcional. Nos de PC, a tenda (Steam, GOG…); nos de consola, a rexión ou a versión, se a sabes."
+      placeholder: "Por exemplo: Steam; ou a versión europea"
+  - type: textarea
+    id: por-que
+    attributes:
+      label: Por que che gustaría xogalo en galego?
+      description: Opcional, pero axúdanos a escoller.
+  - type: textarea
+    id: xa-existe
+    attributes:
+      label: Hai xa algunha tradución?
+      description: "Opcional. Se sabes que existe unha ao galego, ou unha ao castelán que se poida aproveitar, dinos onde."

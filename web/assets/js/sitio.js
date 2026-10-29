@@ -41,6 +41,60 @@
     soProbadas.addEventListener("change", aplicar);
   }
 
+  // ---------- Escaparate da portada ----------
+  // Pasa polas capturas en galego de todas as fichas. Párase co rato enriba, co foco dentro ou
+  // coa lapela agochada; se o sistema pide menos movemento, só cambia cos puntos.
+  const escaparate = document.querySelector("[data-escaparate]");
+  if (escaparate) {
+    const diapos = [...escaparate.querySelectorAll("[data-diapo]")];
+    const puntos = escaparate.querySelector("[data-puntos]");
+    const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const DURACION = 6500, ORIXINAL = 1800;
+    const motivos = new Set();
+    let actual = 0, temporizador = null, volta = null;
+
+    const amosar = (i) => {
+      clearTimeout(volta);
+      diapos[actual].classList.remove("activa", "amosa-orixinal");
+      actual = (i + diapos.length) % diapos.length;
+      const d = diapos[actual];
+      d.classList.add("activa");
+      diapos.forEach((x, j) => {
+        x.setAttribute("aria-hidden", String(j !== actual));
+        x.tabIndex = j === actual ? 0 : -1;
+      });
+      botons.forEach((b, j) => b.setAttribute("aria-current", String(j === actual)));
+      if (!quieto && d.classList.contains("con-orixinal")) {
+        d.classList.add("amosa-orixinal");
+        volta = setTimeout(() => d.classList.remove("amosa-orixinal"), ORIXINAL);
+      }
+    };
+    const programar = () => {
+      clearInterval(temporizador);
+      if (!quieto && !motivos.size && diapos.length > 1) temporizador = setInterval(() => amosar(actual + 1), DURACION);
+    };
+    const parar = (motivo, si) => { if (si) motivos.add(motivo); else motivos.delete(motivo); programar(); };
+
+    const botons = diapos.map((d, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", `Ver ${d.dataset.titulo} (${i + 1} de ${diapos.length})`);
+      b.addEventListener("click", () => { amosar(i); programar(); });
+      puntos.append(b);
+      return b;
+    });
+    puntos.hidden = diapos.length < 2;
+    diapos.forEach((d) => { d.hidden = false; });
+    escaparate.dataset.listo = "";
+    escaparate.addEventListener("mouseenter", () => parar("rato", true));
+    escaparate.addEventListener("mouseleave", () => parar("rato", false));
+    escaparate.addEventListener("focusin", () => parar("foco", true));
+    escaparate.addEventListener("focusout", () => parar("foco", false));
+    document.addEventListener("visibilitychange", () => parar("agochada", document.hidden));
+    amosar(0);
+    programar();
+  }
+
   // ---------- Comentarios (giscus) ----------
   const caixaGiscus = document.querySelector("[data-giscus]");
   const temaGiscus = () => (temaActual() === "dark" ? "dark_dimmed" : "light");

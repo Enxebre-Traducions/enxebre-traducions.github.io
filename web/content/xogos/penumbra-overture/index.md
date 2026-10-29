@@ -14,6 +14,9 @@ probada: false
 sen_probar: "Está traducida enteira. Comprobouse que o xogo arranca, que a intro e o comezo saen en galego (tamén coa dobraxe) e que garda as partidas, pero aínda a estamos xogando e ninguén chegou ao final."
 
 portada: "capturas/portada.webp"
+# capturas que saen tamén no escaparate da portada da web (teñen que amosar o galego)
+escaparate:
+  - "capturas/carga.webp"
 comparacions:
   - nome: "Mapa da mina"
     orixinal: "capturas/mapa-mina-en.webp"

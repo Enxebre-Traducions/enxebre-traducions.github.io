@@ -14,6 +14,9 @@ probada: true
 probada_data: 2026-10-25
 
 portada: "capturas/menu.webp"
+# capturas que saen tamén no escaparate da portada da web (teñen que amosar o galego)
+escaparate:
+  - "capturas/xornal.webp"
 galeria:
   - imaxe: "capturas/menu-enteiro.webp"
     texto: "O menú principal, en galego"
