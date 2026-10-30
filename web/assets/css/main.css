@@ -546,6 +546,9 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .galeria-grella a:hover img { opacity: .92; }
 .galeria-grella figcaption { font-size: .86rem; color: var(--tinta-tenue); margin-top: 8px; }
 @media (max-width: 560px) { .galeria-grella { grid-template-columns: 1fr; } }
+.video-marco { aspect-ratio: 16 / 9; border-radius: var(--raio-p); overflow: hidden; border: 1px solid var(--raia); background: #000; }
+.video-marco iframe { display: block; width: 100%; height: 100%; border: 0; }
+.video-texto { font-size: .86rem; color: var(--tinta-tenue); margin: 8px 0 0; }
 
 /* ---------- Parcheador ---------- */
 

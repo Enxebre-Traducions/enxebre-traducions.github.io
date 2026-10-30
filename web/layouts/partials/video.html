@@ -1,0 +1,10 @@
+{{/* Vídeo de YouTube do xogo (vai despois das capturas). Na ficha: video: {youtube: "<id>", texto: "…"}. Recibe a páxina do xogo. */}}
+{{ with .Params.video }}
+<section class="bloque video" aria-labelledby="video">
+  <h2 id="video">En vídeo</h2>
+  <div class="video-marco">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ .youtube }}" title="Vídeo de {{ $.Title }} en YouTube" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  {{ with .texto }}<p class="video-texto">{{ . | markdownify }}</p>{{ end }}
+</section>
+{{ end }}

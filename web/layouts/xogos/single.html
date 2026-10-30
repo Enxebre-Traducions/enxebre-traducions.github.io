@@ -22,6 +22,7 @@
     <div class="ficha-principal">
       {{ if $p.comparacions }}{{ partial "comparador.html" . }}{{ end }}
       {{ if $p.galeria }}{{ partial "galeria.html" . }}{{ end }}
+      {{ partial "video.html" . }}
 
       <section class="bloque prosa" aria-labelledby="sobre-xogo">
         <h2 id="sobre-xogo">Sobre a tradución</h2>
