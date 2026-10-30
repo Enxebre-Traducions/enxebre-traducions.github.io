@@ -14,6 +14,13 @@ disableKinds = ["taxonomy", "term"]
   [params.doazons]
     paypal = "https://paypal.me/Calculinpizza"
 
+  # A canle de YouTube coas reseñas dos xogos. ferramentas/videos_youtube.py
+  # le o seu feed e pon o vídeo de cada xogo na súa ficha (sección «En vídeo»).
+  [params.youtube]
+    canle = "Santa Campaña"
+    id = "UCRyFkDd2Z94aNl2jB4K1ucA"
+    url = "https://www.youtube.com/channel/UCRyFkDd2Z94aNl2jB4K1ucA"
+
   # Comentarios con giscus: gárdanse nas Discussions do repositorio.
   # Cada xogo ten o seu fío polo nome da ficha (non pola URL), así que
   # sobreviven a un cambio de dominio.

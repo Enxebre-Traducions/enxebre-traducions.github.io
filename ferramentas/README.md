@@ -20,6 +20,7 @@ vale para todo o xogo e non hai que tocar nin un punteiro.
 | `iconos.py` | Debuxa en pixel art o icono da web (o mando coa bandeira) e escribe o logo e o favicon: `python3 ferramentas/iconos.py mando` |
 | `compartir.py` | Debuxa a base da imaxe que se ve ao compartir a portada (fondo, logo e lema). As portadas dos xogos pónas Hugo enriba ao compilar, así que só hai que executalo se cambia o lema ou o logo |
 | `escoller_xogo.sh` | A busca do xogo común a todos os instaladores de PC (só Linux): mira en Steam, Heroic, Lutris, Bottles, Wine e `~/Games`, pregunta en cal das copias e deixa escoller outra carpeta (busca dentro dela). Cada empaquetador métea tal cal no `instalar.sh`; as instrucións van na cabeceira |
+| `videos_youtube.py` | Busca na canle de YouTube (o feed público, `[params.youtube]` de `web/hugo.toml`) o vídeo de cada xogo e pono na súa ficha (`video.youtube`, sección «En vídeo»). Vale se a descrición leva a ligazón á ficha ou se o título é «Turbo Review de <xogo>» coa plataforma da ficha. Execútao soa `.github/workflows/videos.yml` cada seis horas; `--probar` só di o que faría |
 
 ## Fluxo
 

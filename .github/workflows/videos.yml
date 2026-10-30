@@ -1,0 +1,32 @@
+name: Vídeos de YouTube
+
+# Cada seis horas mira a canle de YouTube e, se hai un vídeo dun xogo da web, pono na
+# súa ficha e volve publicar a web (ver ferramentas/videos_youtube.py).
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar o repositorio
+        uses: actions/checkout@v4
+      - name: Buscar vídeos novos
+        run: python3 ferramentas/videos_youtube.py
+      - name: Gardar e publicar a web
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then echo "Ningún vídeo novo."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Fichas: vídeo de YouTube atopado na canle"
+          git push
+          # un push feito co token da acción non lanza outras accións: hai que pedilo
+          gh workflow run web.yml --ref main

@@ -5,6 +5,6 @@
   <div class="video-marco">
     <iframe src="https://www.youtube-nocookie.com/embed/{{ .youtube }}" title="Vídeo de {{ $.Title }} en YouTube" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
-  {{ with .texto }}<p class="video-texto">{{ . | markdownify }}</p>{{ end }}
+  <p class="video-texto">{{ with .texto }}{{ . | markdownify }}{{ else }}{{ with site.Params.youtube }}A reseña de {{ $.Title }} na canle de YouTube <a href="{{ .url }}">{{ .canle }}</a>.{{ end }}{{ end }}</p>
 </section>
 {{ end }}
