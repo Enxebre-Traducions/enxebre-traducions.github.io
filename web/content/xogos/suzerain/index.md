@@ -60,6 +60,10 @@ descargas:
 
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA (Claude), a partir da súa [versión en castelán](https://github.com/SuperPadLand/suzerain-castellano)"]
+
+# Atopouno ferramentas/videos_youtube.py
+video:
+  youtube: "bkVZJjZCKNA"
 ---
 
 Suzerain é un xogo de política sen disparos: es Anton Rayne, presidente recén elixido de Sordland, un país que acaba de saír dunha ditadura, e cada conversa cos ministros, os xornalistas ou a túa familia vai decidindo que tipo de goberno fas. Ten moitísimo texto, e todo importa.
