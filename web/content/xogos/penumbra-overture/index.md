@@ -7,7 +7,7 @@ plataforma: "PC (Linux)"
 ano: 2007
 compania: "Frictional Games"
 xenero: "Terror"
-version: "0.9.1"
+version: "0.9.2"
 estado: "Completa, con dobraxe opcional"
 
 probada: false
@@ -66,12 +66,12 @@ instalador:
 
 descargas:
   - nome: "Con dobraxe galega"
-    nota: "Versión 0.9.1 (.zip, 10 MB). Textos, carteis e voces"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.1/Penumbra-Overture-en-galego-0.9.1-dobraxe.zip"
+    nota: "Versión 0.9.2 (.zip, 10 MB). Textos, carteis e voces"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.2/Penumbra-Overture-en-galego-0.9.2-dobraxe.zip"
     destacada: true
   - nome: "Só textos"
-    nota: "Versión 0.9.1 (.zip, 2,3 MB). Voces orixinais en inglés"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.1/Penumbra-Overture-en-galego-0.9.1.zip"
+    nota: "Versión 0.9.2 (.zip, 2,3 MB). Voces orixinais en inglés"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.2/Penumbra-Overture-en-galego-0.9.2.zip"
 
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA (Gemini e Claude)"]
