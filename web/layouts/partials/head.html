@@ -5,6 +5,7 @@
 <title>{{ $titulo }}</title>
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{ with site.Params.verificacionGoogle }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
 <meta property="og:type" content="website">
 <meta property="og:locale" content="gl_ES">
 <meta property="og:site_name" content="{{ site.Title }}">
