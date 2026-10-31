@@ -75,7 +75,7 @@
           <div><dt>Compañía</dt><dd>{{ $p.compania }}</dd></div>
           <div><dt>Ano</dt><dd>{{ $p.ano }}</dd></div>
           <div><dt>Xénero</dt><dd>{{ $p.xenero }}</dd></div>
-          <div><dt>Versión</dt><dd>{{ $p.version }} <span class="tenue">({{ .Date.Format "02/01/2006" }})</span></dd></div>
+          <div><dt>Versión</dt><dd>{{ $p.version }} <span class="tenue">({{ .Lastmod.Format "02/01/2006" }})</span></dd></div>
           <div><dt>Estado</dt><dd>{{ $p.estado }}</dd></div>
           <div><dt>Probada por humanos</dt><dd>{{ if $p.probada }}<span class="si">Si</span>{{ else }}<span class="non">Aínda non</span>{{ end }}</dd></div>
           {{ range $p.creditos }}<div><dt>{{ index . 0 }}</dt><dd>{{ index . 1 | markdownify }}</dd></div>{{ end }}

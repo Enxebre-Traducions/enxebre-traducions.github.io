@@ -1,6 +1,7 @@
 ---
 title: "Suzerain"
 date: 2026-10-21
+lastmod: 2026-10-29
 subtitulo: "Goberna Sordland en galego: conversas, xornais, leis, finais e o códex enteiro."
 sistema: "PC"
 plataforma: "PC (Linux)"
