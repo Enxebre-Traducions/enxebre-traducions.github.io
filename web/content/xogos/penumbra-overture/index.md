@@ -1,22 +1,24 @@
 ---
 title: "Penumbra: Overture"
 date: 2026-10-27
+lastmod: 2026-11-01
 subtitulo: "Terror nunha mina de Groenlandia, en galego: textos, carteis, mapas e, se queres, tamén as voces."
 sistema: "PC"
 plataforma: "PC (Linux)"
 ano: 2007
 compania: "Frictional Games"
 xenero: "Terror"
-version: "0.9.2"
+version: "1.0"
 estado: "Completa, con dobraxe opcional"
 
-probada: false
-sen_probar: "Está traducida enteira. Comprobouse que o xogo arranca, que a intro e o comezo saen en galego (tamén coa dobraxe) e que garda as partidas, pero aínda a estamos xogando e ninguén chegou ao final."
+probada: true
+probada_data: 2026-11-01
 
 portada: "capturas/portada.webp"
 # capturas que saen tamén no escaparate da portada da web (teñen que amosar o galego)
 escaparate:
   - "capturas/carga.webp"
+  - "capturas/carteis-red.webp"
 comparacions:
   - nome: "Mapa da mina"
     orixinal: "capturas/mapa-mina-en.webp"
@@ -41,6 +43,10 @@ galeria:
     texto: "As pantallas de carga contan a historia de Philip"
   - imaxe: "capturas/mapa-xogo.webp"
     texto: "O mapa da mina vella e un pensamento de Philip"
+  - imaxe: "capturas/carteis-red.webp"
+    texto: "Carteis da mina e Red pola radio"
+  - imaxe: "capturas/mapa-mina-nova.webp"
+    texto: "O mapa da parte nova da mina, rotulado en galego"
 
 traducido:
   - "Todos os textos: menús, opcións, notas, diarios, descricións dos obxectos, as mensaxes de Red pola radio, a intro e as pantallas de carga"
@@ -62,16 +68,16 @@ instalador:
     - "Fai dobre clic en `instalar.sh` (se pregunta que facer, escolle *Executar*). Ábrese unha xanela de terminal onde só tes que ir respondendo: busca Penumbra: Overture el só (Steam, Heroic, Lutris, Bottles, Wine…) e pregúntache en cal das copias o pon; escribe o número e preme Intro. Se o tes noutro sitio, escolle «0» e indícalle a carpeta; vale tamén unha que a conteña, como o disco onde o gardas."
     - "Abre o xogo: xa sae en galego. Se non, escolle Galego en *Opcións > Xogo > Idioma*."
     - "Para volver ao inglés: dobre clic en `desinstalar.sh`."
-  nota: "O instalador arranxa tamén un fallo do propio xogo en Linux: tal como o abre Steam, pecha de súpeto ao gardar unha partida cun nome con til ou ao premer teclas coma «º». Se o xogo se actualiza ou se verifica e volve o inglés, abonda con executar outra vez `instalar.sh`. Para cambiar dun paquete ao outro, instala o novo por riba. Coa versión de Windows o idioma escóllese a man no menú e, antes de desinstalar, hai que volver poñer *English* nese mesmo menú. Tamén se pode poñer a man: copia o contido da carpeta `datos` dentro da do xogo e escolle Galego no menú; coa versión de Steam para Linux, mellor co instalador, que arranxa o lanzador. Se o dobre clic abre o texto do ficheiro en vez de executalo (pasa en GNOME), fai clic dereito nel e escolle executalo como programa, ou abre unha terminal na carpeta e escribe `bash instalar.sh`."
+  nota: "O instalador arranxa tamén un fallo do propio xogo en Linux: tal como o abre Steam, pecha de súpeto ao gardar unha partida cun nome con til ou ao premer teclas coma «º». Se o xogo se actualiza ou se verifica e volve o inglés, abonda con executar outra vez `instalar.sh`. Para cambiar dun paquete ao outro, ou se tiñas unha versión anterior, instala o novo por riba; nas partidas xa empezadas, os obxectos que levabas conservan o nome que tiñan. Coa versión de Windows o idioma escóllese a man no menú e, antes de desinstalar, hai que volver poñer *English* nese mesmo menú. Tamén se pode poñer a man: copia o contido da carpeta `datos` dentro da do xogo e escolle Galego no menú; coa versión de Steam para Linux, mellor co instalador, que arranxa o lanzador. Se o dobre clic abre o texto do ficheiro en vez de executalo (pasa en GNOME), fai clic dereito nel e escolle executalo como programa, ou abre unha terminal na carpeta e escribe `bash instalar.sh`."
 
 descargas:
   - nome: "Con dobraxe galega"
-    nota: "Versión 0.9.2 (.zip, 10 MB). Textos, carteis e voces"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.2/Penumbra-Overture-en-galego-0.9.2-dobraxe.zip"
+    nota: "Versión 1.0 (.zip, 10 MB). Textos, carteis e voces"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v1.0/Penumbra-Overture-en-galego-1.0-dobraxe.zip"
     destacada: true
   - nome: "Só textos"
-    nota: "Versión 0.9.2 (.zip, 2,3 MB). Voces orixinais en inglés"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v0.9.2/Penumbra-Overture-en-galego-0.9.2.zip"
+    nota: "Versión 1.0 (.zip, 2,3 MB). Voces orixinais en inglés"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v1.0/Penumbra-Overture-en-galego-1.0.zip"
 
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA (Gemini e Claude)"]
