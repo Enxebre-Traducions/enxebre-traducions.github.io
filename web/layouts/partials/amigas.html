@@ -1,0 +1,19 @@
+{{- with site.Params.amigas }}
+<section class="seccion amigas" id="webs-amigas" aria-labelledby="webs-amigas-titulo">
+  <div class="envoltorio">
+    <h2 id="webs-amigas-titulo">Webs amigas</h2>
+    <div class="amigas-grella">
+      {{- range . }}
+      <a class="amiga" href="{{ .url }}">
+        {{- with .icona }}<img class="amiga-icona" src="{{ . | relURL }}" width="88" height="88" alt="">{{ end }}
+        <span class="amiga-texto">
+          <span class="amiga-nome">{{ .nome }}</span>
+          <span class="amiga-descricion">{{ .descricion | default .texto }}</span>
+          <span class="amiga-boton">{{ .boton | default "Visitar" }} <span aria-hidden="true">→</span></span>
+        </span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

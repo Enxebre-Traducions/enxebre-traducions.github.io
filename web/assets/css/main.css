@@ -653,6 +653,19 @@ kbd { display: inline-block; min-width: 1.8em; padding: .15em .45em; margin-righ
 
 /* ---------- Pé ---------- */
 
+/* ---------- Webs amigas (portada) ---------- */
+.amigas h2 { margin-bottom: 20px; }
+.amigas-grella { display: grid; gap: 22px; }
+.amiga { display: flex; align-items: center; gap: clamp(18px, 3vw, 32px); padding: clamp(22px, 3.5vw, 34px) clamp(22px, 4vw, 40px); border-radius: var(--raio); background: linear-gradient(120deg, #3b3482 0%, #2a2552 45%, #1c1c22 100%); color: #f2f1fb; text-decoration: none; box-shadow: var(--sombra); transition: transform .2s ease, box-shadow .2s ease; }
+.amiga:hover { color: #f2f1fb; transform: translateY(-3px); box-shadow: var(--sombra-forte); }
+.amiga-icona { flex: none; width: clamp(64px, 9vw, 88px); height: auto; border-radius: 20%; box-shadow: 0 10px 30px -8px rgb(91 76 219 / .7); }
+.amiga-texto { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.amiga-nome { font-family: var(--letra-titulos, inherit); font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.1; letter-spacing: -.01em; }
+.amiga-descricion { color: #c9c6e6; max-width: 62ch; }
+.amiga-boton { margin-top: 6px; display: inline-flex; align-items: center; gap: .4em; padding: .55em 1.1em; border-radius: 999px; background: #5b4cdb; color: #fff; font-weight: 600; transition: background .2s; }
+.amiga:hover .amiga-boton { background: #7466f2; }
+@media (max-width: 560px) { .amiga { flex-direction: column; align-items: flex-start; } }
+
 .pe { border-top: 1px solid var(--raia); background: var(--fondo-alterno); padding: 48px 0 28px; font-size: .93rem; color: var(--tinta-suave); }
 .pe-grella { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 28px 40px; }
 .pe-amigas { list-style: none; padding: 0; margin: 0; display: grid; gap: .7em; }

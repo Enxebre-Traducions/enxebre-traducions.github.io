@@ -23,11 +23,14 @@ disableKinds = ["taxonomy", "term"]
     id = "UCRyFkDd2Z94aNl2jB4K1ucA"
     url = "https://www.youtube.com/channel/UCRyFkDd2Z94aNl2jB4K1ucA"
 
-  # Webs amigas: saen no pé de todas as páxinas.
+  # Webs amigas: saen na portada (debaixo das traducións) e no pé de todas as páxinas.
   [[params.amigas]]
     nome = "SuperPadLand"
     url = "https://superpadland.github.io/gl/"
     texto = "Os mellores xogos de cada consola retro, tamén en galego."
+    descricion = "Os mellores xogos de cada consola retro, da NES á Wii U, probados un a un e sempre que se pode en hardware real. Rankings cunha reseña de cada xogo, agora tamén en galego."
+    boton = "Ver os tops en galego"
+    icona = "amigas/superpadland.svg"
 
   # Comentarios con giscus: gárdanse nas Discussions do repositorio.
   # Cada xogo ten o seu fío polo nome da ficha (non pola URL), así que
