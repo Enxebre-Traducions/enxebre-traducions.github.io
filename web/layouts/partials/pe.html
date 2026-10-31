@@ -18,6 +18,16 @@
       {{ partial "doar.html" $ }}
     </div>
     {{ end }}
+    {{ with site.Params.amigas }}
+    <div>
+      <h2 class="pe-titulo">Webs amigas</h2>
+      <ul class="pe-amigas">
+        {{ range . }}
+        <li><a href="{{ .url }}">{{ .nome }}</a> <span>{{ .texto }}</span></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
   </div>
   <div class="envoltorio pe-baixo">
     <span>Traducións de uso libre e non comercial</span>

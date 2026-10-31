@@ -654,7 +654,10 @@ kbd { display: inline-block; min-width: 1.8em; padding: .15em .45em; margin-righ
 /* ---------- Pé ---------- */
 
 .pe { border-top: 1px solid var(--raia); background: var(--fondo-alterno); padding: 48px 0 28px; font-size: .93rem; color: var(--tinta-suave); }
-.pe-grella { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 28px 56px; }
+.pe-grella { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 28px 40px; }
+.pe-amigas { list-style: none; padding: 0; margin: 0; display: grid; gap: .7em; }
+.pe-amigas a { font-weight: 600; }
+.pe-amigas span { display: block; }
 .pe-grella p { max-width: 60ch; }
 .pe-lema { margin-top: 12px; }
 .pe-titulo { font-family: var(--letra-pixel); font-weight: 400; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; color: var(--tinta); margin-bottom: .8em; }

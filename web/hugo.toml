@@ -23,6 +23,12 @@ disableKinds = ["taxonomy", "term"]
     id = "UCRyFkDd2Z94aNl2jB4K1ucA"
     url = "https://www.youtube.com/channel/UCRyFkDd2Z94aNl2jB4K1ucA"
 
+  # Webs amigas: saen no pé de todas as páxinas.
+  [[params.amigas]]
+    nome = "SuperPadLand"
+    url = "https://superpadland.github.io/gl/"
+    texto = "Os mellores xogos de cada consola retro, tamén en galego."
+
   # Comentarios con giscus: gárdanse nas Discussions do repositorio.
   # Cada xogo ten o seu fío polo nome da ficha (non pola URL), así que
   # sobreviven a un cambio de dominio.
