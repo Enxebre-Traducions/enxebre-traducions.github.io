@@ -36,10 +36,9 @@ traducido:
   - "As imaxes de texto do final, co inglés borrado e o galego escrito coa letra do propio xogo"
   - "Co paquete da dobraxe, as voces: o locutor da radio (tamén o do teléfono), o feto, a bolsa de papel e a voz do final"
 sen_traducir:
-  - "Os menús que engade o port de PC (axustes de PC, gráficos, extras, modo foto…) e os nomes dos idiomas que engadiu: van dentro do programa e saen en castelán"
+  - "Nos menús quedan algúns restos en castelán"
   - "O título «OPTIONS» do menú de opcións, que xa vén en inglés en todos os idiomas do xogo"
   - "A radio en sueco e os murmurios: no orixinal non teñen subtítulos en ningún idioma, e tamén na dobraxe quedan como estaban"
-  - "No paquete de só textos, as voces quedan en inglés, cos subtítulos en galego"
 
 rom:
   nome: "P.T., probada co port de PC 1.0.8 e os datos da versión americana de PS4"
