@@ -14,9 +14,11 @@ estado: "Completa, con dobraxe opcional"
 probada: true
 probada_data: 2026-11-01
 
-portada: "capturas/radio-vermella.png"
-# capturas que saen tamén no escaparate da portada da web (teñen que amosar o galego)
+portada: "capturas/silent-hills.png"
+# a portada (o logo do final) non leva texto en galego: no escaparate da web saen só estas
+escaparate_sen_portada: true
 escaparate:
+  - "capturas/radio-vermella.png"
   - "capturas/corredor.png"
 galeria:
   - imaxe: "capturas/corredor.png"
