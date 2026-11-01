@@ -4,11 +4,13 @@
 
 {{/* Escaparate: de cada xogo, a portada (sempre ten que amosar o galego) e as capturas que a ficha
      poña en «escaparate», cos xogos máis novos primeiro. Se a imaxe ten a súa parella no comparador
-     da ficha, ensínase un momento o orixinal antes do galego. */}}
+     da ficha, ensínase un momento o orixinal antes do galego. Con «escaparate_sen_portada: true» a portada
+     non sae (para cando a portada non leva texto en galego, como o logo do final de P.T.). */}}
 {{ $diapos := slice }}
 {{ range $xogos }}
   {{ $xogo := . }}
-  {{ $rutas := slice .Params.portada }}
+  {{ $rutas := slice }}
+  {{ if not .Params.escaparate_sen_portada }}{{ $rutas = slice .Params.portada }}{{ end }}
   {{ with .Params.escaparate }}{{ $rutas = $rutas | append . }}{{ end }}
   {{ range $rutas }}
     {{ $ruta := . }}
