@@ -41,17 +41,17 @@ sen_traducir:
 
 rom:
   nome: "Suzerain 3.1.0, probada coa versión de Steam"
-  nota: "En Linux ou Steam Deck, co xogo funcionando con Proton, Wine, Heroic, Lutris ou Bottles. O instalador recoñece a versión de Steam coa que se probou; con calquera outra copia (doutra tenda, como GOG, ou doutra versión) avisa e pregunta antes de tocar nada, porque iso aínda non o probou ninguén. Non trae ningún ficheiro do xogo: traduce o teu."
+  nota: "En Linux, co xogo funcionando con Proton, Wine, Heroic, Lutris ou Bottles. O instalador recoñece a versión de Steam coa que se probou; con calquera outra copia (doutra tenda, como GOG, ou doutra versión) avisa e pregunta antes de tocar nada, porque iso aínda non o probou ninguén. Non trae ningún ficheiro do xogo: traduce o teu."
 
 instalador:
-  onde: "Linux e Steam Deck"
+  onde: "Linux"
   pasos:
     - "Descarga o paquete e descomprímeo onde queiras."
     - "Pecha o xogo."
     - "Fai dobre clic en `instalar.sh` (se pregunta que facer, escolle *Executar*). Ábrese unha xanela de terminal onde só tes que ir respondendo: busca Suzerain el só (Steam, Heroic, Lutris, Bottles, Wine…) e pregúntache en cal das copias o pon; escribe o número e preme Intro. Se o tes noutro sitio, escolle «0» e indícalle a carpeta; vale tamén unha que a conteña, como o disco onde o gardas."
     - "Abre Suzerain. Vale tamén coas partidas xa empezadas."
     - "Para volver ao inglés: dobre clic en `desinstalar.sh`."
-  nota: "A primeira vez descarga UnityPy (uns 30 MB), a ferramenta que edita os ficheiros do xogo, e gárdaa aparte. Se o xogo se actualiza e volve o inglés, abonda con executar outra vez `instalar.sh`. Na Steam Deck faise desde o modo escritorio. Se o dobre clic abre o texto do ficheiro en vez de executalo (pasa en GNOME), fai clic dereito nel e escolle executalo como programa, ou abre unha terminal na carpeta e escribe `bash instalar.sh`."
+  nota: "A primeira vez descarga UnityPy (uns 30 MB), a ferramenta que edita os ficheiros do xogo, e gárdaa aparte. Se o xogo se actualiza e volve o inglés, abonda con executar outra vez `instalar.sh`. Se o dobre clic abre o texto do ficheiro en vez de executalo (pasa en GNOME), fai clic dereito nel e escolle executalo como programa, ou abre unha terminal na carpeta e escribe `bash instalar.sh`."
 
 descargas:
   - nome: "Instalador para Linux"

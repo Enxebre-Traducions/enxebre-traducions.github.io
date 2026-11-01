@@ -33,7 +33,7 @@ body:
     id: cal
     attributes:
       label: Que emulador ou que consola?
-      description: "Por exemplo: Mesen 2, ares, RetroArch co núcleo Mesen… ou unha NES PAL cun EverDrive N8. En PC: Linux, Steam Deck…"
+      description: "Por exemplo: Mesen 2, ares, RetroArch co núcleo Mesen… ou unha NES PAL cun EverDrive N8. En PC: a distribución de Linux (CachyOS, Ubuntu…)"
     validations:
       required: true
   - type: input
