@@ -3,7 +3,9 @@
   <a class="tarxeta-ligazon" href="{{ .RelPermalink }}">
     <div class="tarxeta-imaxe{{ if .Params.pixelada }} pixelada{{ end }}">
       {{ with .Resources.Get .Params.portada }}
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Title }} en galego" loading="lazy">
+      {{ $ver := . }}
+      {{ if gt .Width 900 }}{{ $ver = .Resize "900x webp q82" }}{{ end }}
+      <img src="{{ $ver.RelPermalink }}" width="{{ $ver.Width }}" height="{{ $ver.Height }}" alt="{{ $.Title }} en galego" loading="lazy">
       {{ end }}
       <span class="tarxeta-chips">
         <span class="tarxeta-sistema">{{ .Params.sistema }}</span>

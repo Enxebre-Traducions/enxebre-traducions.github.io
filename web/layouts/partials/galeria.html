@@ -4,8 +4,11 @@
   <div class="galeria-grella">
     {{ range $i, $c := .Params.galeria }}
     {{ with $.Resources.Get $c.imaxe }}
+    {{/* as capturas grandes (PNG de 2560 px) véñense nunha copia lixeira; a ligazón leva á orixinal */}}
+    {{ $ver := . }}
+    {{ if gt .Width 1400 }}{{ $ver = .Resize "1400x webp q85" }}{{ end }}
     <figure class="{{ if eq $i 0 }}galeria-grande{{ end }}">
-      <a href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $c.texto }}" loading="lazy"></a>
+      <a href="{{ .RelPermalink }}"><img src="{{ $ver.RelPermalink }}" width="{{ $ver.Width }}" height="{{ $ver.Height }}" alt="{{ $c.texto }}" loading="lazy"></a>
       <figcaption>{{ $c.texto }}</figcaption>
     </figure>
     {{ end }}
