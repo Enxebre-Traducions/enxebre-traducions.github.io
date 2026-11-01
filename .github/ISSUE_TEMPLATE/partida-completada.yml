@@ -15,6 +15,7 @@ body:
         - Castlevania (NES)
         - Suzerain (PC)
         - "Penumbra: Overture (PC)"
+        - "P.T. (Silent Hills) (PC)"
         - Outro
     validations:
       required: true
