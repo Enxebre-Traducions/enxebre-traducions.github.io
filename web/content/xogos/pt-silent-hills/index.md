@@ -66,6 +66,10 @@ descargas:
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA (Claude)"]
   - ["Dobraxe", "Voces xeradas con IA (OmniVoice)"]
+
+# Atopouno ferramentas/videos_youtube.py
+video:
+  youtube: "y7xJh0X9kXo"
 ---
 
 P.T. apareceu en 2014 na PlayStation 4 como un xogo de terror gratuíto dun estudo que ninguén coñecía: un corredor, unha radio e unha porta que sempre te devolve ao comezo. Quen chegaba ao final descubría que era o avance xogable de *Silent Hills*, de Hideo Kojima e Guillermo del Toro. O xogo cancelouse e Konami retirou P.T. da tenda en 2015, pero aquel corredor quedou na memoria de todos. Hoxe pódese xogar en PC grazas ao port de LoreanXavier, que le os datos da túa propia copia de PS4.
