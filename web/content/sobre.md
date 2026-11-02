@@ -33,4 +33,4 @@ Os xogos son propiedade das súas respectivas compañías. Este proxecto non ten
 
 ## Créditos da web
 
-Feita con [Hugo](https://gohugo.io/) e aloxada en GitHub Pages. Tipografías [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque), [Inter](https://rsms.me/inter/) e [Silkscreen](https://fonts.google.com/specimen/Silkscreen), con licenza OFL. O emulador do navegador é [JSNES](https://github.com/bfirsh/jsnes) (licenza Apache 2.0) e os comentarios funcionan con [giscus](https://giscus.app/).
+Feita con [Hugo](https://gohugo.io/) e aloxada en GitHub Pages. Tipografías [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque), [Inter](https://rsms.me/inter/) e [Silkscreen](https://fonts.google.com/specimen/Silkscreen), con licenza OFL. Os comentarios funcionan con [giscus](https://giscus.app/).

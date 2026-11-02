@@ -56,7 +56,6 @@ parcheador:
   tamano_sen_cabeceira: 131072
   cabeceira: "4e45531a080021000000000000000000"
   saida: "Castlevania (galego).nes"
-  xogable: true
 
 descargas:
   - nome: "Parche BPS"

@@ -8,8 +8,6 @@
   "tamano" $c.tamano_sen_cabeceira
   "saida" $c.saida
   "extension" $c.extension
-  "xogable" $c.xogable
-  "jsnes" ("vendor/jsnes/jsnes.min.js" | relURL)
 }}
 <section class="bloque parcheador" aria-labelledby="parchear">
   <div class="bloque-cabeceira">
@@ -36,7 +34,6 @@
       <p class="resultado-texto" data-mensaxe></p>
       <div class="resultado-botons">
         <a class="boton boton-primario" data-descargar hidden>Descargar {{ $c.saida }}</a>
-        {{ if $c.xogable }}<button type="button" class="boton boton-secundario" data-xogar hidden>Xogar no navegador</button>{{ end }}
         <button type="button" class="boton boton-texto" data-outra>Probar con outra ROM</button>
       </div>
     </div>
@@ -44,23 +41,3 @@
   <p class="nota-pe">Compróbase o contido da ROM, non a cabeceira, así que vale aínda que a túa copia teña unha cabeceira distinta. Se prefires facelo á man, tes os parches en «Descargas».</p>
 </section>
 
-{{ if $c.xogable }}
-<dialog class="xogar" data-dialogo-xogo aria-labelledby="xogar-titulo">
-  <div class="xogar-cabeceira">
-    <h2 id="xogar-titulo">{{ .Title }} en galego</h2>
-    <button type="button" class="boton-icona" data-pechar aria-label="Pechar o xogo">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-    </button>
-  </div>
-  <div class="xogar-pantalla" data-pantalla-xogo tabindex="-1"></div>
-  <ul class="xogar-controis">
-    <li><kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> moverse</li>
-    <li><kbd>X</kbd> botón A</li>
-    <li><kbd>Z</kbd> botón B</li>
-    <li><kbd>Intro</kbd> Start</li>
-    <li><kbd>Ctrl</kbd> dereito: Select</li>
-    <li>Tamén vale un mando</li>
-  </ul>
-  <p class="nota-pe">Emulación sinxela para probar a tradución. Para unha partida longa, mellor un emulador como <a href="https://ares-emu.net/">ares</a> ou <a href="https://www.mesen.ca/">Mesen</a>.</p>
-</dialog>
-{{ end }}

@@ -1,4 +1,4 @@
-// Ficha dun xogo: comparador antes/despois, parcheador e emulador no navegador
+// Ficha dun xogo: comparador antes/despois, e parcheador no navegador
 
 (() => {
   // ---------- Comparador ----------
@@ -50,7 +50,6 @@
   const resultado = caixa.querySelector("[data-resultado]");
   const mensaxe = caixa.querySelector("[data-mensaxe]");
   const descargar = caixa.querySelector("[data-descargar]");
-  const xogar = caixa.querySelector("[data-xogar]");
   const outra = caixa.querySelector("[data-outra]");
   let urlDescarga = null;
   let romParcheada = null;
@@ -71,7 +70,6 @@
     resultado.classList.toggle("mal", !ok);
     resultado.hidden = false;
     descargar.hidden = !ok;
-    if (xogar) xogar.hidden = !ok;
   }
 
   function reiniciar() {
@@ -219,47 +217,4 @@
     if (f) procesar(f);
   });
   outra.addEventListener("click", reiniciar);
-
-  // ---------- Xogar no navegador (JSNES) ----------
-  const dialogo = document.querySelector("[data-dialogo-xogo]");
-  if (!xogar || !dialogo) return;
-  const pantalla = dialogo.querySelector("[data-pantalla-xogo]");
-  let emulador = null;
-
-  const cargarJsnes = () => new Promise((ok, mal) => {
-    if (window.jsnes) return ok();
-    const s = document.createElement("script");
-    s.src = cfg.jsnes;
-    s.onload = () => ok();
-    s.onerror = () => mal(new Error("Non se puido cargar o emulador."));
-    document.head.appendChild(s);
-  });
-
-  xogar.addEventListener("click", async () => {
-    if (!romParcheada) return;
-    try {
-      await cargarJsnes();
-    } catch (e) {
-      amosar(e.message, false);
-      return;
-    }
-    dialogo.showModal();
-    emulador = new window.jsnes.Browser({
-      container: pantalla,
-      onError: (e) => console.error(e),
-    });
-    emulador.loadROM(romParcheada);
-    // sen o recorte de 8 píxeles polos lados que JSNES fai por defecto, para ver o marcador enteiro
-    // (loadROM volve poñelo, así que vai despois)
-    emulador.nes.ppu.clipToTvSize = false;
-    emulador.fitInParent();
-    pantalla.focus();
-  });
-
-  const parar = () => {
-    if (emulador) { emulador.destroy(); emulador = null; }
-  };
-  dialogo.querySelector("[data-pechar]").addEventListener("click", () => dialogo.close());
-  dialogo.addEventListener("close", parar);
-  window.addEventListener("resize", () => { if (emulador) emulador.fitInParent(); });
 })();

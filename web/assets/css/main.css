@@ -587,18 +587,6 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .resultado-texto { margin: 0 0 14px; color: var(--tinta); }
 .resultado-botons { display: flex; flex-wrap: wrap; gap: 10px; }
 
-/* Xogar no navegador */
-.xogar {
-  width: min(760px, 100% - 24px); max-height: calc(100% - 24px); padding: 0; border: 1px solid var(--raia);
-  border-radius: calc(var(--raio) + 4px); background: var(--superficie); color: var(--tinta); box-shadow: var(--sombra-forte);
-}
-.xogar::backdrop { background: rgb(4 8 16 / .78); backdrop-filter: blur(4px); }
-.xogar-cabeceira { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px 14px 22px; }
-.xogar-cabeceira h2 { font-size: 1.15rem; margin: 0; }
-.xogar-pantalla { display: grid; place-items: center; background: #000; aspect-ratio: 256 / 240; max-height: 70vh; width: 100%; }
-.xogar-pantalla canvas { image-rendering: pixelated; }
-.xogar-controis { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; padding: 14px 22px 0; font-size: .88rem; color: var(--tinta-suave); }
-.xogar .nota-pe { padding: 0 22px 18px; }
 kbd { display: inline-block; min-width: 1.8em; padding: .15em .45em; margin-right: .2em; text-align: center; border-radius: 5px; border: 1px solid var(--raia-forte); border-bottom-width: 2px; background: var(--superficie-2); color: var(--tinta); font-size: .8em; }
 
 /* Instalador */
