@@ -16,6 +16,7 @@ body:
         - Suzerain (PC)
         - "Penumbra: Overture (PC)"
         - "P.T. (Silent Hills) (PC)"
+        - Lakeview Valley (PC)
         - Outro
     validations:
       required: true

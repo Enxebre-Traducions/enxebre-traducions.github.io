@@ -47,6 +47,7 @@ xogos serían meses de enxeñaría inversa en vez de días de tradución.
 | [Suzerain](https://enxebre-traducions.github.io/xogos/suzerain/) | PC (Linux) | v1.0.1 | Completa (Sordland) | ✅ Si, xogada enteira |
 | [Penumbra: Overture](https://enxebre-traducions.github.io/xogos/penumbra-overture/) | PC (Linux) | v1.0 | Completa, con dobraxe opcional | ✅ Si, xogada enteira |
 | [P.T. (Silent Hills)](https://enxebre-traducions.github.io/xogos/pt-silent-hills/) | PC (Linux), co port de PC | v1.0 | Completa, con dobraxe opcional | ✅ Si, xogada enteira |
+| [Lakeview Valley](https://enxebre-traducions.github.io/xogos/lakeview-valley/) | PC (Linux) | v1.0 | Completa | ✅ Si (mundo vivo: pode haber fallos en camiños que non se viron) |
 
 «Probada por humanos» quere dicir que unha persoa xogou o xogo enteiro coa
 tradución posta. As que aínda non o están pasaron as comprobacións
