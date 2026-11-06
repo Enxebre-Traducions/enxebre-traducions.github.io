@@ -10,7 +10,7 @@ Nos xogos de consola, cada ficha ten un parcheador:
 
 1. Arrastra a túa ROM ao recadro (vale tamén dentro dun `.zip`).
 2. A web comproba que é exactamente a versión que precisa a tradución.
-3. Se o é, devólvecha xa traducida para descargala. Nos xogos de NES podes xogala alí mesmo.
+3. Se o é, devólvecha xa traducida para descargala.
 
 Todo pasa no teu navegador: **a ROM non se envía a ningures**. A web só descarga o parche, que é un ficheiro pequeno cos cambios.
 
@@ -18,7 +18,7 @@ Todo pasa no teu navegador: **a ROM non se envía a ningures**. A web só descar
 
 Un parche escribe en posicións concretas da ROM. Se a túa copia é doutra revisión ou doutra rexión, eses cambios caen onde non deben e o xogo sae roto ou nin arranca. Por iso cada ficha indica o nome exacto da ROM e as súas sumas de comprobación (CRC32 e MD5).
 
-O parcheador da web compara o **contido** da ROM, non a cabeceira de 16 bytes que levan as ROMs de NES. Se a túa copia ten outra cabeceira (por exemplo, NES 2.0) pero o xogo é o mesmo, vale igual.
+O parcheador da web compara o **contido** da ROM, non a cabeceira de 16 bytes que levan as ROMs de NES e Famicom. Se a túa copia ten outra cabeceira (por exemplo, NES 2.0) pero o xogo é o mesmo, vale igual.
 
 ## A vía clásica: parchear á man
 

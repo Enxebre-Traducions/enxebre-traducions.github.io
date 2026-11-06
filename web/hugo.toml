@@ -59,3 +59,7 @@ disableKinds = ["taxonomy", "term"]
   source = "../castlevania-nes"
   target = "static/parches/castlevania-nes"
   files = ["castlevania_galego.ips", "castlevania_galego.bps"]
+[[module.mounts]]
+  source = "../sweet-home-famicom"
+  target = "static/parches/sweet-home-famicom"
+  files = ["sweethome_galego.ips", "sweethome_galego.bps", "sweethome_galego_nointro.bps"]

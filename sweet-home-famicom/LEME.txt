@@ -1,0 +1,90 @@
+================================================================
+  SWEET HOME (FAMICOM) - TRADUCIÓN AO GALEGO
+  Versión 0.9 (sen probar por humanos) · 06/11/2026
+  Enxebre Traducións · https://enxebre-traducions.github.io
+================================================================
+
+ESTADO
+------
+Aínda sen xogar enteira por humanos. Todos os textos
+comprobáronse automaticamente nun emulador: cada mensaxe, con
+todas as súas variantes, mostrouse no xogo real e o texto que
+aparecía na pantalla comparouse co guión. Ademais, xogouse o
+comezo en ares e en Mesen e funciona ben.
+
+Falta xogala de principio a fin e probala na consola orixinal
+(Famicom). Se a xogas, avísanos de ata onde chegaches e onde.
+
+
+QUE TRAE
+--------
+Esta versión está feita de cero e traduce o guión XAPONÉS orixinal,
+non a tradución inglesa nin a castelá:
+
+  - Os 466 textos do xogo: diálogos, notas, o diario de Ichiro, os
+    frescos, as mensaxes de combate, a intro e o final.
+  - As respostas propias de cada personaxe e as variantes de home
+    e de muller, que a tradución inglesa (e con ela a castelá)
+    recortara por falta de espazo.
+  - Os nomes completos dos 72 obxectos (ata 8 letras: «Mecheiro»,
+    «Botiquín», «Lanterna», «Figuriña») e dos 31 inimigos.
+  - Menús, pantalla de título («PREME START»), pantalla de nomes,
+    fin de partida e créditos finais.
+  - Maiúsculas con til (É, Á, Ó, Í, Ú), debuxadas para o galego.
+
+Os nomes propios mantéñense: Kazuo, Akiko, Taguchi, Asuka, Emi,
+Yamamura, Ichiro Mamiya e a señora Mamiya.
+
+
+ROM DE DESTINO E PARCHES
+------------------------
+O parche aplícase á ROM xaponesa limpa, sen ningunha tradución.
+Hai dous, segundo a cabeceira que traia a túa copia:
+
+  sweethome_galego.bps
+      Sweet Home (Japan).nes, cabeceira iNES clásica
+      MD5 49dd966e8a0e17bae16bc3d393c9d742 · CRC32 40803BC5
+
+  sweethome_galego_nointro.bps
+      O mesmo volcado coa cabeceira NES 2.0 de No-Intro
+      MD5 761c3fbbbd4ea29f19e28311a583de3a · CRC32 6AB7673A
+
+Os .bps aplícanse con Floating IPS (Flips), beat ou calquera
+parcheador web, e comproban a ROM: se non é a correcta, avisan.
+Tamén vai un .ips para parcheadores antigos (non comproba nada).
+
+A ROM resultante mide 512 KB:
+  MD5   88320972dbd9b748df4a78794a6cb00f
+  CRC32 04EA8A49
+
+
+POR QUE 512 KB
+--------------
+O xaponés ten moito máis texto do que collía no inglés e o galego
+ocupa máis aínda. A ROM pasa de 256 a 512 KB, coma Dragon Warrior
+III e IV: a metade nova é unha copia da orixinal cun segundo banco
+de texto. Probouse en ares e en Mesen; debería ir en calquera
+emulador que soporte a placa SUROM do mapper 1 (FCEUX,
+Nestopia...) e nos cartuchos flash coma o EverDrive N8.
+
+
+CRÉDITOS
+--------
+  Sweet Home: Capcom, 1989.
+  Tradución inglesa e hack do motor (fonte latina, nomes de
+  lonxitude variable...): The Siege e JMN, 2016.
+  Wave (Traducións Wave): versión castelá e o hack gráfico das
+  vogais con til, que segue nesta ROM, e as ferramentas e a
+  documentación de Hextractor.
+  Tradución ao galego e hacking: Enxebre Traducións, feita con
+  intelixencia artificial (Claude e Gemini).
+
+Se atopas algún erro, indica a pantalla e, se podes, unha captura:
+https://github.com/enxebre-traducions/enxebre-traducions.github.io/issues
+
+
+LICENZA
+-------
+A tradución distribúese para uso libre e non comercial. Sweet Home
+é propiedade de Capcom; este proxecto non ten relación ningunha coa
+empresa e non distribúe o xogo.

@@ -13,7 +13,7 @@
   {{ $en := $.Resources.Get $c.orixinal }}
   {{ $gl := $.Resources.Get $c.galego }}
   <div class="comparador-marco{{ if $p.pixelada }} pixelada{{ end }}" data-panel="{{ $i }}"{{ if ne $i 0 }} hidden{{ end }} style="--pos: 50%; aspect-ratio: {{ $en.Width }} / {{ $en.Height }}">
-    <img class="comp-en" src="{{ $en.RelPermalink }}" width="{{ $en.Width }}" height="{{ $en.Height }}" alt="{{ $c.nome }} no orixinal en inglés" loading="lazy">
+    <img class="comp-en" src="{{ $en.RelPermalink }}" width="{{ $en.Width }}" height="{{ $en.Height }}" alt="{{ $c.nome }} no orixinal en {{ $p.lingua_orixinal | default "inglés" }}" loading="lazy">
     <img class="comp-gl" src="{{ $gl.RelPermalink }}" width="{{ $gl.Width }}" height="{{ $gl.Height }}" alt="{{ $c.nome }} en galego" loading="lazy">
     <span class="comp-etiqueta comp-etiqueta-en">Orixinal</span>
     <span class="comp-etiqueta comp-etiqueta-gl">Galego</span>
