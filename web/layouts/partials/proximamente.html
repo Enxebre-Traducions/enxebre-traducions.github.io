@@ -1,0 +1,18 @@
+{{/* Traducións en preparación (ficha con «proximamente: true»): sen descargas, aparte da grella
+     e fóra das cifras, das Novidades, do RSS, do escaparate e da imaxe para compartir.
+     Recibe a lista delas. */}}
+{{ with . }}
+<section class="seccion" id="proximamente" aria-labelledby="proximamente-titulo">
+  <div class="envoltorio">
+    <div class="seccion-cabeceira">
+      <div>
+        <h2 id="proximamente-titulo">Proximamente</h2>
+        <p class="seccion-entrada">Traducións nas que estamos a traballar. Aínda non se poden descargar: cando saian, aparecerán enriba e nas novidades.</p>
+      </div>
+    </div>
+    <div class="grella-xogos">
+      {{ range . }}{{ partial "tarxeta.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

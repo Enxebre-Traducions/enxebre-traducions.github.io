@@ -2,7 +2,8 @@
      coas portadas dos catro xogos máis novos enriba. Devolve a imaxe xa procesada. */}}
 {{ $imaxe := resources.Get "compartir/base.png" }}
 {{ $marco := resources.Get "compartir/marco.png" }}
-{{ $xogos := first 4 (where site.RegularPages "Section" "xogos").ByDate.Reverse }}
+{{ $todas := (where site.RegularPages "Section" "xogos").ByDate.Reverse }}
+{{ $xogos := first 4 ($todas | complement (where $todas "Params.proximamente" true)) }}
 {{ range $i, $x := $xogos }}
   {{ with $x.Resources.Get $x.Params.portada }}
     {{ $portada := . }}

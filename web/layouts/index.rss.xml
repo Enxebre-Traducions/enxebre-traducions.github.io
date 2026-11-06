@@ -1,5 +1,6 @@
 {{- /* Só os xogos novos, non as súas actualizacións nin as páxinas soltas: a data é a da ficha */ -}}
-{{- $xogos := (where site.RegularPages "Section" "xogos").ByDate.Reverse -}}
+{{- $todas := (where site.RegularPages "Section" "xogos").ByDate.Reverse -}}
+{{- $xogos := $todas | complement (where $todas "Params.proximamente" true) -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>

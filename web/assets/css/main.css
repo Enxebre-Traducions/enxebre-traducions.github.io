@@ -364,6 +364,7 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .selo svg { width: 1.25em; height: 1.25em; flex: none; }
 .selo-si { color: var(--si); background: var(--si-suave); }
 .selo-non { color: var(--non); background: var(--non-suave); }
+.selo-proximo { color: var(--acento); background: var(--acento-suave); }
 
 .explica-selos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
 .explica-selo { background: var(--superficie); border: 1px solid var(--raia); border-radius: var(--raio); padding: 24px; }
@@ -422,6 +423,7 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .ficha-selo-grande { max-width: 380px; padding: 18px 20px; border-radius: var(--raio); border: 1px solid; }
 .ficha-selo-grande.si { background: var(--si-suave); border-color: color-mix(in srgb, var(--si) 30%, transparent); }
 .ficha-selo-grande.non { background: var(--non-suave); border-color: color-mix(in srgb, var(--non) 30%, transparent); }
+.ficha-selo-grande.proximo { background: var(--acento-suave); border-color: color-mix(in srgb, var(--acento) 30%, transparent); }
 .ficha-selo-grande .selo { font-size: 1rem; padding: 0; background: none; margin-bottom: 10px; }
 .ficha-selo-grande p { font-size: .93rem; color: var(--tinta-suave); margin: 0; }
 .ficha-selo-grande .selo-data { margin-top: .6em; font-weight: 600; color: var(--tinta); }
@@ -637,6 +639,8 @@ kbd { display: inline-block; min-width: 1.8em; padding: .15em .45em; margin-righ
 .boton-paypal svg { width: 1.15em; height: 1.15em; color: #d23b3b; }
 .caixa-apoiar p { font-size: .93rem; color: var(--tinta-suave); margin-bottom: 14px; }
 .caixa-apoiar .boton-paypal { width: 100%; }
+.caixa-proximamente p { font-size: .93rem; color: var(--tinta-suave); margin-bottom: 10px; }
+.caixa-proximamente p:last-child { margin-bottom: 0; }
 .pe .boton-paypal { margin-top: 4px; }
 
 /* Comentarios */

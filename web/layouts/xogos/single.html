@@ -13,9 +13,9 @@
           <h1>{{ .Title }}</h1>
           <p class="ficha-subtitulo">{{ $p.subtitulo }}</p>
         </div>
-        <div class="ficha-selo-grande{{ if $p.probada }} si{{ else }} non{{ end }}">
+        <div class="ficha-selo-grande{{ if $p.proximamente }} proximo{{ else if $p.probada }} si{{ else }} non{{ end }}">
           {{ partial "selo.html" . }}
-          {{ partial "probas.html" . }}
+          {{ if $p.proximamente }}<p>{{ $p.proximamente_texto }}</p>{{ else }}{{ partial "probas.html" . }}{{ end }}
         </div>
       </div>
     </div>
@@ -43,12 +43,19 @@
       {{ with $p.parcheador }}{{ partial "parcheador.html" $ }}{{ end }}
       {{ with $p.instalador }}{{ partial "instalador.html" $ }}{{ end }}
 
-      {{ partial "completada.html" . }}
+      {{ if not $p.proximamente }}{{ partial "completada.html" . }}{{ end }}
 
       {{ partial "comentarios.html" . }}
     </div>
 
     <aside class="ficha-lateral">
+      {{ if $p.proximamente }}
+      <section class="caixa caixa-proximamente" aria-labelledby="descargas">
+        <h2 id="descargas">Descargas</h2>
+        <p>Aínda non hai nada que descargar: estamos a traballar nesta tradución.</p>
+        <p><a href="{{ "index.xml" | relURL }}">Subscríbete ao RSS</a> e avisámoste cando saia.</p>
+      </section>
+      {{ else }}
       <section class="caixa" aria-labelledby="descargas">
         <h2 id="descargas">Descargas</h2>
         <ul class="descargas">
@@ -62,6 +69,7 @@
           {{ end }}
         </ul>
       </section>
+      {{ end }}
 
       {{ with site.Params.doazons.paypal }}
       <section class="caixa caixa-apoiar" aria-labelledby="apoiar">
@@ -78,9 +86,9 @@
           <div><dt>Compañía</dt><dd>{{ $p.compania }}</dd></div>
           <div><dt>Ano</dt><dd>{{ $p.ano }}</dd></div>
           <div><dt>Xénero</dt><dd>{{ $p.xenero }}</dd></div>
-          <div><dt>Versión</dt><dd>{{ $p.version }} <span class="tenue">({{ .Lastmod.Format "02/01/2006" }})</span></dd></div>
+          {{ if not $p.proximamente }}<div><dt>Versión</dt><dd>{{ $p.version }} <span class="tenue">({{ .Lastmod.Format "02/01/2006" }})</span></dd></div>{{ end }}
           <div><dt>Estado</dt><dd>{{ $p.estado }}</dd></div>
-          <div><dt>Probada por humanos</dt><dd>{{ if $p.probada }}<span class="si">Si</span>{{ else }}<span class="non">Aínda non</span>{{ end }}</dd></div>
+          {{ if not $p.proximamente }}<div><dt>Probada por humanos</dt><dd>{{ if $p.probada }}<span class="si">Si</span>{{ else }}<span class="non">Aínda non</span>{{ end }}</dd></div>{{ end }}
           {{ range $p.creditos }}<div><dt>{{ index . 0 }}</dt><dd>{{ index . 1 | markdownify }}</dd></div>{{ end }}
         </dl>
       </section>
@@ -100,10 +108,12 @@
       </section>
       {{ end }}
 
+      {{ if not $p.proximamente }}
       <a class="caixa caixa-erro" href="{{ site.Params.repo }}/issues/new?template=erro-traducion.yml&xogo={{ printf "%s (%s)" .Title $p.sistema | urlquery }}&version={{ $p.version | urlquery }}">
         <strong>Atopaches un erro?</strong>
         <span>Cóntanolo nunha incidencia de GitHub →</span>
       </a>
+      {{ end }}
     </aside>
   </div>
 </article>

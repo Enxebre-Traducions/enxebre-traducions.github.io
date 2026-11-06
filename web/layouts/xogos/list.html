@@ -1,5 +1,7 @@
 {{ define "main" }}
-{{ $xogos := .Pages.ByDate.Reverse }}
+{{ $todas := .Pages.ByDate.Reverse }}
+{{ $proximas := where $todas "Params.proximamente" true }}
+{{ $xogos := $todas | complement $proximas }}
 <section class="seccion seccion-primeira">
   <div class="envoltorio">
     <div class="redes-fila">{{ partial "redes.html" (dict "paxina" . "modo" "arriba") }}</div>
@@ -16,4 +18,5 @@
     <p class="baleiro" data-baleiro hidden>Ningunha tradución cumpre eses filtros.</p>
   </div>
 </section>
+{{ partial "proximamente.html" $proximas }}
 {{ end }}

@@ -1,5 +1,8 @@
 {{ define "main" }}
-{{ $xogos := (where site.RegularPages "Section" "xogos").ByDate.Reverse }}
+{{ $todas := (where site.RegularPages "Section" "xogos").ByDate.Reverse }}
+{{/* as que aínda non saíron («proximamente») van na súa sección e non contan en ningures máis */}}
+{{ $proximas := where $todas "Params.proximamente" true }}
+{{ $xogos := $todas | complement $proximas }}
 {{ $probadas := where $xogos "Params.probada" true }}
 
 {{/* Escaparate: de cada xogo, a portada (sempre ten que amosar o galego) e as capturas que a ficha
@@ -102,6 +105,8 @@
     <p class="baleiro" data-baleiro hidden>Ningunha tradución cumpre eses filtros.</p>
   </div>
 </section>
+
+{{ partial "proximamente.html" $proximas }}
 
 {{ partial "amigas.html" . }}
 

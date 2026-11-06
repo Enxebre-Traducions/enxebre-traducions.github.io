@@ -1,5 +1,5 @@
 {{/* Tarxeta dun xogo para as listas. Recibe a páxina do xogo. */}}
-<article class="tarxeta" data-sistema="{{ .Params.sistema }}" data-probada="{{ if .Params.probada }}si{{ else }}non{{ end }}">
+<article class="tarxeta{{ if .Params.proximamente }} tarxeta-proxima{{ end }}" data-sistema="{{ .Params.sistema }}" data-probada="{{ if .Params.probada }}si{{ else }}non{{ end }}">
   <a class="tarxeta-ligazon" href="{{ .RelPermalink }}">
     <div class="tarxeta-imaxe{{ if .Params.pixelada }} pixelada{{ end }}">
       {{ with .Resources.Get .Params.portada }}
@@ -15,7 +15,7 @@
     </div>
     <div class="tarxeta-corpo">
       <h3 class="tarxeta-titulo">{{ .Title }}</h3>
-      <p class="tarxeta-meta">{{ .Params.compania }} · {{ .Params.ano }} · v{{ .Params.version }}</p>
+      <p class="tarxeta-meta">{{ .Params.compania }} · {{ .Params.ano }}{{ with .Params.version }} · v{{ . }}{{ end }}</p>
       <p class="tarxeta-resumo">{{ .Params.subtitulo }}</p>
       {{ with .Params.probas }}
       <p class="tarxeta-probas">
