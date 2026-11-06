@@ -90,3 +90,14 @@ Un equipo de televisión entra na mansión abandonada do pintor Ichiro Mamiya en
 Esta tradución parte do **guión xaponés**, non da versión inglesa. O xaponés ten moito máis texto: cada personaxe responde ao seu xeito e hai frases distintas para home e para muller, e en inglés todo iso recortárase por falta de espazo. Para que collese o galego enteiro, a ROM pasa de 256 a 512 KB, coma Dragon Warrior III e IV: a metade nova leva un segundo banco de texto. Probouse en ares e en Mesen, e debería ir en calquera emulador ou cartucho flash que soporte a placa SUROM do mapper 1.
 
 As maiúsculas con til (É, Á, Ó, Í, Ú) debuxáronse para o galego. A tradución e o romhacking fixéronse con intelixencia artificial, e cada texto comprobouse automaticamente no propio xogo. Falta que alguén a xogue de principio a fin: se o fas, avísanos.
+
+### Por que non hai ¿ nin ¡
+
+Nesta tradución as preguntas e as exclamacións levan só o signo do final. É correcto: as normas da Real Academia Galega fan obrigatorio o signo final e deixan o de apertura como opcional.
+
+<blockquote class="cita">
+<p>A entoación interrogativa ou exclamativa márcase ao final do enunciado por medio dos signos ? e !, respectivamente: <em>Por que non llelo preguntas ti?; Miraches ben?; Vaia, Tomé, por que non calas?; Vaiche boa!; Mira que non o fagas!</em> Para facilitar a lectura e evitar ambigüidades poderase indicar o inicio destas entoacións cos signos ¿ e ¡, respectivamente.</p>
+<footer>Real Academia Galega e Instituto da Lingua Galega, <a href="https://publicacions.academia.gal/index.php/rag/catalog/download/216/212/101?inline=1#page=25"><cite>Normas ortográficas e morfolóxicas do idioma galego</cite></a>, apartado 7, «Os signos de interrogación e de admiración», páx. 27.</footer>
+</blockquote>
+
+Aquí optouse por non usalos porque a fonte orixinal do xogo non trae nin ¿ nin ¡, a caixa de texto só ten 17 columnas e o galego, traducido do xaponés, xa obrigou a dobrar o tamaño da ROM para que coubese todo. Noutras traducións desta web si se usan.

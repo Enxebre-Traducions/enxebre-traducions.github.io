@@ -504,6 +504,10 @@ code, kbd { font-family: var(--mono); font-size: .88em; }
 .prosa strong { color: var(--tinta); }
 .prosa ul, .prosa ol { padding-left: 1.3em; }
 .prosa li { margin-bottom: .4em; }
+.prosa blockquote { margin: 1.2em 0; padding: 14px 18px; border-left: 3px solid var(--acento); border-radius: 0 var(--raio-p) var(--raio-p) 0; background: var(--superficie-2); color: var(--tinta); }
+.prosa blockquote p { margin: 0 0 .6em; }
+.prosa blockquote footer { font-size: .88rem; color: var(--tinta-tenue); }
+.prosa blockquote cite { font-style: italic; }
 .prosa code { background: var(--superficie-2); border: 1px solid var(--raia); padding: .1em .35em; border-radius: 5px; color: var(--tinta); }
 .lista-check, .lista-menos { list-style: none; padding: 0 !important; margin: 0 0 1em; }
 .lista-check li, .lista-menos li { position: relative; padding-left: 1.7em; }
