@@ -3,7 +3,10 @@
 <article class="ficha">
   <header class="ficha-cabeceira">
     <div class="envoltorio">
-      <nav class="migas" aria-label="Estás en"><a href="{{ "xogos/" | relURL }}">Xogos</a> <span aria-hidden="true">/</span> {{ .Title }}</nav>
+      <div class="ficha-arriba">
+        <nav class="migas" aria-label="Estás en"><a href="{{ "xogos/" | relURL }}">Xogos</a> <span aria-hidden="true">/</span> {{ .Title }}</nav>
+        {{ partial "redes.html" (dict "paxina" . "modo" "arriba") }}
+      </div>
       <div class="ficha-titulo">
         <div>
           <p class="antetitulo">{{ $p.plataforma }} · {{ $p.ano }}</p>

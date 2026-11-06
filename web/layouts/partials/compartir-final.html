@@ -1,0 +1,16 @@
+{{/* Abaixo de todo, antes do pé: botóns para compartir a páxina, co nome de cada rede. */}}
+<section class="compartir-final" aria-labelledby="compartir-titulo">
+  <div class="envoltorio">
+    <h2 id="compartir-titulo">Fai correr a voz</h2>
+    <p class="compartir-entrada">
+      {{- if .IsHome -}}
+        Se coñeces a alguén ao que lle poida prestar xogar en galego, pásalle a web. Abonda cun clic.
+      {{- else if and .IsPage (eq .Section "xogos") -}}
+        Se coñeces a alguén ao que lle poida prestar xogar a {{ .Title }} en galego, pásalle esta páxina. Abonda cun clic.
+      {{- else -}}
+        Se coñeces a alguén ao que lle poida prestar xogar en galego, pásalle esta páxina. Abonda cun clic.
+      {{- end -}}
+    </p>
+    {{ partial "redes.html" (dict "paxina" . "modo" "abaixo") }}
+  </div>
+</section>

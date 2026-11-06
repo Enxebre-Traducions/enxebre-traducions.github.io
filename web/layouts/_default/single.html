@@ -1,6 +1,7 @@
 {{ define "main" }}
 <article class="seccion seccion-primeira">
   <div class="envoltorio estreito">
+    <div class="redes-fila">{{ partial "redes.html" (dict "paxina" . "modo" "arriba") }}</div>
     <header class="paxina-cabeceira">
       {{ with .Params.antetitulo }}<p class="antetitulo">{{ . }}</p>{{ end }}
       <h1>{{ .Title }}</h1>

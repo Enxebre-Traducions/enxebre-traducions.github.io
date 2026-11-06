@@ -9,6 +9,7 @@
   <main id="contido">
     {{ block "main" . }}{{ end }}
   </main>
+  {{ partial "compartir-final.html" . }}
   {{ partial "pe.html" . }}
   {{ $js := resources.Get "js/sitio.js" | minify | fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

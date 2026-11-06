@@ -1,4 +1,4 @@
-// Tema, filtros da grella e comentarios
+// Tema, filtros da grella, escaparate, compartir e comentarios
 
 (() => {
   const raiz = document.documentElement;
@@ -94,6 +94,43 @@
     amosar(0);
     programar();
   }
+
+  // ---------- Compartir ----------
+  // As redes son ligazóns e funcionan sen JS; aquí só «Copiar a ligazón» e o menú de compartir do sistema.
+  document.querySelectorAll("[data-redes]").forEach((redes) => {
+    const aviso = redes.querySelector("[data-redes-aviso]");
+    const copiar = redes.querySelector("[data-copiar]");
+    if (copiar && navigator.clipboard && window.isSecureContext) {
+      redes.querySelector("[data-copiar-caixa]").hidden = false;
+      const texto = copiar.querySelector("[data-copiar-texto]");
+      const orixinal = texto.innerHTML;
+      let volta = null;
+      copiar.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(copiar.dataset.copiar);
+        } catch (e) {
+          aviso.textContent = "Non se puido copiar a ligazón";
+          return;
+        }
+        clearTimeout(volta);
+        copiar.dataset.feito = "";
+        if (redes.classList.contains("redes-abaixo")) texto.textContent = "Copiada";
+        aviso.textContent = "Ligazón copiada";
+        volta = setTimeout(() => {
+          delete copiar.dataset.feito;
+          texto.innerHTML = orixinal;
+          aviso.textContent = "";
+        }, 2000);
+      });
+    }
+    const nativo = redes.querySelector("[data-nativo]");
+    if (nativo && navigator.share) {
+      redes.querySelector("[data-nativo-caixa]").hidden = false;
+      nativo.addEventListener("click", () => {
+        navigator.share({ title: nativo.dataset.titulo, url: nativo.dataset.url }).catch(() => {});
+      });
+    }
+  });
 
   // ---------- Comentarios (giscus) ----------
   const caixaGiscus = document.querySelector("[data-giscus]");

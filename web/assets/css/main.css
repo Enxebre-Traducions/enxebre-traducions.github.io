@@ -639,6 +639,57 @@ kbd { display: inline-block; min-width: 1.8em; padding: .15em .45em; margin-righ
 .comentarios .nota-pe { margin: -6px 0 18px; }
 .giscus { min-height: 120px; }
 
+/* ---------- Compartir nas redes ---------- */
+
+.so-lectores { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.redes { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.redes-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.rede {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  border: 1px solid var(--raia); background: var(--superficie); color: var(--tinta-suave);
+  font: 600 .93rem/1 var(--letra); text-decoration: none; cursor: pointer;
+  transition: color .15s, border-color .15s, background-color .15s, transform .15s;
+}
+.rede svg { width: 17px; height: 17px; flex: none; }
+.rede:hover { color: var(--cor); border-color: color-mix(in srgb, var(--cor) 55%, var(--raia)); }
+.rede:active { transform: translateY(1px); }
+/* «Ligazón copiada» */
+.rede[data-feito] { color: var(--si); border-color: color-mix(in srgb, var(--si) 55%, var(--raia)); }
+
+/* Arriba: só iconas, discretas */
+.redes-arriba .rede { width: 36px; height: 36px; padding: 0; border-radius: 999px; }
+.redes-arriba .rede-nome { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.redes-etiqueta { font-family: var(--letra-pixel); font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--tinta-tenue); }
+.redes-arriba .rede[data-feito]::after {
+  content: "Copiada"; position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+  padding: .4em .6em; border-radius: 6px; background: var(--tinta); color: var(--fondo);
+  font: 600 .78rem/1 var(--letra); white-space: nowrap; pointer-events: none; z-index: 5;
+}
+.heroe-redes { position: absolute; top: 14px; left: 0; right: 0; z-index: 2; display: flex; justify-content: flex-end; }
+.ficha-arriba { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; margin-bottom: 20px; }
+.ficha-arriba .migas { margin: 0; }
+.redes-fila { display: flex; justify-content: flex-end; margin: -12px 0 12px; }
+@media (max-width: 560px) {
+  .redes-etiqueta { display: none; }
+  .redes-arriba .redes-lista { gap: 4px; }
+  .redes-arriba .rede { width: 32px; height: 32px; }
+  .redes-arriba .rede svg { width: 15px; height: 15px; }
+  .heroe { padding-top: 64px; }
+  .heroe-redes { top: 12px; }
+  .redes-fila { margin-top: -16px; }
+}
+
+/* Abaixo: co nome de cada rede e a icona na súa cor */
+.compartir-final { padding: clamp(40px, 6vw, 64px) 0; border-top: 1px solid var(--raia); text-align: center; }
+.compartir-final h2 { margin-bottom: .3em; }
+.compartir-entrada { color: var(--tinta-suave); max-width: 56ch; margin: 0 auto 24px; }
+.redes-abaixo { justify-content: center; }
+.redes-abaixo .redes-lista { justify-content: center; gap: 10px; max-width: 760px; }
+.redes-abaixo .rede { min-height: 44px; padding: .65em 1.1em; border-radius: 999px; }
+.redes-abaixo .rede svg { color: var(--cor); }
+.redes-abaixo .rede:hover { background: color-mix(in srgb, var(--cor) 12%, var(--superficie)); border-color: var(--cor); color: var(--tinta); }
+.redes-abaixo .rede[data-feito], .redes-abaixo .rede[data-feito] svg { color: var(--si); }
+
 /* ---------- Pé ---------- */
 
 /* ---------- Webs amigas (portada) ---------- */
