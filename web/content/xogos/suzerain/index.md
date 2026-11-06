@@ -60,7 +60,7 @@ descargas:
     destacada: true
 
 creditos:
-  - ["Tradución", "Enxebre Traducións, con IA (Claude), a partir da súa [versión en castelán](https://github.com/SuperPadLand/suzerain-castellano)"]
+  - ["Tradución", "Enxebre Traducións, con IA, a partir da súa [versión en castelán](https://github.com/SuperPadLand/suzerain-castellano)"]
 
 # Atopouno ferramentas/videos_youtube.py
 video:

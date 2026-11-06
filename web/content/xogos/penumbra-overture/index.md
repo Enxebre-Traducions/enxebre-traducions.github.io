@@ -80,8 +80,8 @@ descargas:
     url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/penumbra-overture-v1.0/Penumbra-Overture-en-galego-1.0.zip"
 
 creditos:
-  - ["Tradución", "Enxebre Traducións, con IA (Gemini e Claude)"]
-  - ["Dobraxe", "Voces xeradas con IA (OmniVoice)"]
+  - ["Tradución", "Enxebre Traducións, con IA"]
+  - ["Dobraxe", "Voces xeradas con IA"]
 ---
 
 Penumbra: Overture é o primeiro capítulo da serie de terror de Frictional Games, os de *Amnesia*. Philip recibe unha carta do seu pai, dado por morto hai trinta anos, e a pista lévao a unha mina abandonada baixo o xeo de Groenlandia. Alí abaixo só ten a lanterna, o que atopa polo camiño e unha voz na radio: Red.

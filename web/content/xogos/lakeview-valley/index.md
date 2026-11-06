@@ -64,7 +64,7 @@ descargas:
     destacada: true
 
 creditos:
-  - ["Tradución", "Enxebre Traducións, con IA (Claude e Gemini)"]
+  - ["Tradución", "Enxebre Traducións, con IA"]
 ---
 
 Lakeview Valley é un RPG de asasinatos en pixel art. Chegas en autobús a un pobo pequeno á beira dun lago para empezar unha vida nova na túa casa. Podes facerte a veciña ou o veciño máis querido do pobo… ou deixarte levar polos teus desexos máis escuros. Decides ti.

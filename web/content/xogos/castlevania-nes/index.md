@@ -70,7 +70,7 @@ descargas:
     url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/v1.0/Castlevania-galego-v1.0.zip"
 
 creditos:
-  - ["Tradución", "Enxebre Traducións, con IA (Claude)"]
+  - ["Tradución", "Enxebre Traducións, con IA"]
   - ["Ferramentas", "[Wave](https://github.com/sewave) (Hextractor e a súa documentación)"]
 ---
 

@@ -77,7 +77,7 @@ CRÉDITOS
   vogais con til, que segue nesta ROM, e as ferramentas e a
   documentación de Hextractor.
   Tradución ao galego e hacking: Enxebre Traducións, feita con
-  intelixencia artificial (Claude e Gemini).
+  intelixencia artificial.
 
 Se atopas algún erro, indica a pantalla e, se podes, unha captura:
 https://github.com/enxebre-traducions/enxebre-traducions.github.io/issues

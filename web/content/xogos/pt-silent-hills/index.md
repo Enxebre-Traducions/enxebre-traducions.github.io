@@ -64,8 +64,8 @@ descargas:
     url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/pt-silent-hills-v1.0/PT-en-galego-1.0.zip"
 
 creditos:
-  - ["Tradución", "Enxebre Traducións, con IA (Claude)"]
-  - ["Dobraxe", "Voces xeradas con IA (OmniVoice)"]
+  - ["Tradución", "Enxebre Traducións, con IA"]
+  - ["Dobraxe", "Voces xeradas con IA"]
 
 # Atopouno ferramentas/videos_youtube.py
 video:

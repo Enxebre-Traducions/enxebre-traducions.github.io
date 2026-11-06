@@ -10,7 +10,7 @@ Traducimos videoxogos ao galego seguindo a norma da Real Academia Galega. Empeza
 
 ## Feitas con intelixencia artificial
 
-Non enganamos a ninguén: **as traducións fanse con IA** (Claude, de Anthropic). A IA traduce os textos e fai o traballo técnico, desde meter o texto na ROM ata debuxar as letras que lle faltan á fonte do xogo. Grazas a iso podemos traducir xogos que doutro xeito nunca chegarían ao galego.
+Non enganamos a ninguén: **as traducións fanse con IA**. A IA traduce os textos e fai o traballo técnico, desde meter o texto na ROM ata debuxar as letras que lle faltan á fonte do xogo. Grazas a iso podemos traducir xogos que doutro xeito nunca chegarían ao galego.
 
 ## «Probada por humanos»
 

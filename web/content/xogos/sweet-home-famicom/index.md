@@ -80,7 +80,7 @@ descargas:
     url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/sweet-home-famicom-v0.9/Sweet-Home-galego-v0.9.zip"
 
 creditos:
-  - ["Tradución", "Enxebre Traducións, con IA (Claude e Gemini)"]
+  - ["Tradución", "Enxebre Traducións, con IA"]
   - ["Versión inglesa e motor", "The Siege e JMN (2016): a fonte latina e os nomes de lonxitude variable"]
   - ["Ferramentas", "[Wave](https://github.com/sewave) (Hextractor e a súa documentación) e o seu gráfico das vogais con til"]
 ---
