@@ -3,11 +3,17 @@ name: Publicar a web
 on:
   push:
     branches: ["main"]
-    paths: ["web/**", "castlevania-nes/castlevania_galego.*", ".github/workflows/web.yml"]
+    paths: ["web/**", "castlevania-nes/castlevania_galego.*", ".github/workflows/web.yml", "ferramentas/comentarios.py"]
+  # cada comentario novo nunha ficha volve publicar a web, para que saia na portada
+  discussion_comment:
+    types: [created, edited, deleted]
+  discussion:
+    types: [deleted]
   workflow_dispatch:
 
 permissions:
   contents: read
+  discussions: read
   pages: write
   id-token: write
 
@@ -34,6 +40,12 @@ jobs:
       - name: Configurar Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Ler os comentarios das fichas
+        # se falla, a web publícase igual, sen a sección de comentarios
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 ferramentas/comentarios.py
       - name: Compilar
         working-directory: web
         env:

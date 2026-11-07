@@ -11,6 +11,15 @@
         <span class="tarxeta-sistema">{{ .Params.sistema }}</span>
         {{/* os parches de PC son só para Linux (decisión do proxecto) */}}
         {{ if eq .Params.sistema "PC" }}<span class="tarxeta-sistema tarxeta-linux">Linux</span>{{ end }}
+        {{/* cantos comentarios ten a ficha; sitio.js marca «novo» se hai algún sen ler */}}
+        {{ $fio := partial "fio.html" . }}
+        {{ with hugo.Data.comentarios }}{{ with index .fios $fio }}
+        <span class="tarxeta-sistema tarxeta-comentarios" data-comentario-fio="{{ $fio }}" data-comentario-data="{{ .ultimo }}" title="{{ .total }} {{ cond (eq (int .total) 1) "comentario" "comentarios" }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" fill="currentColor"/></svg>
+          {{ .total }}<span class="so-lectores"> {{ cond (eq (int .total) 1) "comentario" "comentarios" }}</span>
+          <span data-marca-novo hidden>· novo</span>
+        </span>
+        {{ end }}{{ end }}
       </span>
     </div>
     <div class="tarxeta-corpo">

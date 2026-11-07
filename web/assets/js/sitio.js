@@ -132,6 +132,23 @@
     }
   });
 
+  // ---------- Comentarios novos ----------
+  // Na portada márcase «novo» o que se comentou desde que este navegador abriu por última vez a
+  // ficha dese xogo (ou, se nunca a abriu, desde a primeira visita á web). Só vive neste navegador.
+  const CHAVE_LIDOS = "comentarios-lidos";
+  let lidos = {};
+  try { lidos = JSON.parse(localStorage.getItem(CHAVE_LIDOS)) || {}; } catch (e) {}
+  if (typeof lidos !== "object") lidos = {};
+  const gardarLidos = () => { try { localStorage.setItem(CHAVE_LIDOS, JSON.stringify(lidos)); } catch (e) {} };
+  if (!lidos._desde) { lidos._desde = new Date().toISOString(); gardarLidos(); }
+  document.querySelectorAll("[data-comentario-data]").forEach((el) => {
+    const visto = Date.parse(lidos[el.dataset.comentarioFio] || lidos._desde);
+    if (Date.parse(el.dataset.comentarioData) > visto) {
+      el.classList.add("novo");
+      el.querySelectorAll("[data-marca-novo]").forEach((marca) => { marca.hidden = false; });
+    }
+  });
+
   // ---------- Comentarios (giscus) ----------
   const caixaGiscus = document.querySelector("[data-giscus]");
   const temaGiscus = () => (temaActual() === "dark" ? "dark_dimmed" : "light");
@@ -162,5 +179,9 @@
     };
     Object.entries(atributos).forEach(([k, v]) => s.setAttribute(k, v));
     caixaGiscus.appendChild(s);
+    // ao abrir a ficha (e ao saír, por se se comentou nela) os seus comentarios quedan lidos
+    const marcarLidos = () => { lidos[d.term] = new Date().toISOString(); gardarLidos(); };
+    marcarLidos();
+    window.addEventListener("pagehide", marcarLidos);
   }
 })();

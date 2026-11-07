@@ -10,6 +10,6 @@
     data-repo-id="{{ $g.repoId }}"
     data-category="{{ $g.categoria }}"
     data-category-id="{{ $g.categoriaId }}"
-    data-term="{{ .Params.comentarios | default .File.ContentBaseName }}"
+    data-term="{{ partial "fio.html" . }}"
     data-lang="{{ $g.lingua }}"></div>
 </section>

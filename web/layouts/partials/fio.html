@@ -1,0 +1,4 @@
+{{/* Nome do fío de comentarios dun xogo (o título da súa discusión en GitHub):
+     `comentarios:` da ficha ou, se non o ten, o nome da ficha. Recibe a páxina do xogo. */}}
+{{- $fio := .Params.comentarios | default .File.ContentBaseName -}}
+{{- return $fio -}}

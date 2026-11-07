@@ -1,0 +1,29 @@
+{{/* Portada: os últimos comentarios de todas as fichas, para velos sen entrar en cada unha.
+     Saen de data/comentarios.json (ferramentas/comentarios.py, ao compilar). Se aínda non hai
+     ningún, a sección non aparece. «Novo» pono sitio.js. Recibe todos os xogos. */}}
+{{ $xogos := . }}
+{{ with hugo.Data.comentarios }}{{ with .ultimos }}
+<section class="seccion" id="comentarios" aria-labelledby="ultimos-comentarios">
+  <div class="envoltorio">
+    <h2 id="ultimos-comentarios">Últimos comentarios</h2>
+    <p class="seccion-entrada">O último que se dixo nas fichas. Para responder ou comentar, entra na do xogo.</p>
+    <ol class="comentarios-lista">
+      {{ range . }}
+      {{ $c := . }}
+      {{ range $xogos }}{{ if eq (partial "fio.html" .) $c.fio }}
+      <li>
+        <a class="comentario" href="{{ .RelPermalink }}#comentar" data-comentario-fio="{{ $c.fio }}" data-comentario-data="{{ $c.data }}">
+          <span class="comentario-cabeceira">
+            <span class="comentario-xogo">{{ .Title }}</span>
+            <span class="marca-novo" data-marca-novo hidden>Novo</span>
+          </span>
+          <span class="comentario-meta">{{ $c.autor }}{{ if $c.resposta }}, nunha resposta{{ end }} · <time datetime="{{ $c.data }}">{{ time.AsTime $c.data | time.Format ":date_long" }}</time></span>
+          <span class="comentario-texto">{{ $c.texto }}</span>
+        </a>
+      </li>
+      {{ end }}{{ end }}
+      {{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}{{ end }}

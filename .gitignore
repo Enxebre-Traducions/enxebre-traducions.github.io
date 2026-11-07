@@ -3,3 +3,5 @@
 web/public/
 web/resources/
 web/.hugo_build.lock
+# os comentarios lense ao compilar (ferramentas/comentarios.py)
+web/data/comentarios.json
