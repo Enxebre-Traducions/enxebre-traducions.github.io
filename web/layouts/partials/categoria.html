@@ -1,0 +1,5 @@
+{{/* Categoría do filtro dun xogo: a de params.categorias (hugo.toml) para o seu
+     sistema, ou o sistema tal cal. Recibe a páxina do xogo. */}}
+{{- $s := .Params.sistema -}}
+{{- $c := index site.Params.categorias (lower $s) | default $s -}}
+{{- return $c -}}

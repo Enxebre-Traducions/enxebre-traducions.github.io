@@ -20,7 +20,7 @@ body:
       label: Sistema
       options:
         - PC
-        - NES
+        - NES / Famicom
         - Super Nintendo
         - Mega Drive
         - Game Boy / Game Boy Color

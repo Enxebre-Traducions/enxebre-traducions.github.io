@@ -11,6 +11,13 @@ disableKinds = ["taxonomy", "term"]
   descricion = "Videoxogos traducidos ao galego, dos clásicos de consola aos de PC para Linux. Ti pos o xogo, nós o galego: aquí só hai traducións."
   repo = "https://github.com/enxebre-traducions/enxebre-traducions.github.io"
 
+  # Categorías do filtro da grella: os sistemas que van xuntos nun só botón.
+  # A chave é o «sistema» da ficha en minúsculas; a tarxeta e a ficha seguen
+  # dicindo o sistema de verdade. Os que non estean aquí van co seu nome.
+  [params.categorias]
+    nes = "NES / Famicom"
+    famicom = "NES / Famicom"
+
   # Doazóns: a ligazón de PayPal (paypal.me/... ou a de «Doar» de PayPal).
   # Mentres estea baleira, o botón non aparece en ningures.
   [params.doazons]
