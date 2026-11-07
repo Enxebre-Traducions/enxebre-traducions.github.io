@@ -1,11 +1,13 @@
 {{/* Portada: os últimos comentarios de todas as fichas, para velos sen entrar en cada unha.
-     Saen de data/comentarios.json (ferramentas/comentarios.py, ao compilar). Se aínda non hai
-     ningún, a sección non aparece. «Novo» pono sitio.js. Recibe todos os xogos. */}}
+     Saen de data/comentarios.json (ferramentas/comentarios.py, ao compilar). Mentres non haxa
+     ningún, sae un aviso; se non se puideron ler, a sección non aparece. «Novo» pono sitio.js.
+     Recibe todos os xogos. */}}
 {{ $xogos := . }}
-{{ with hugo.Data.comentarios }}{{ with .ultimos }}
+{{ with hugo.Data.comentarios }}
 <section class="seccion" id="comentarios" aria-labelledby="ultimos-comentarios">
   <div class="envoltorio">
     <h2 id="ultimos-comentarios">Últimos comentarios</h2>
+    {{ with .ultimos }}
     <p class="seccion-entrada">O último que se dixo nas fichas. Para responder ou comentar, entra na do xogo.</p>
     <ol class="comentarios-lista">
       {{ range . }}
@@ -24,6 +26,9 @@
       {{ end }}{{ end }}
       {{ end }}
     </ol>
+    {{ else }}
+    <p class="seccion-entrada">Aínda ninguén comentou. Se probaches algunha tradución, cóntanos que tal nos comentarios da súa ficha.</p>
+    {{ end }}
   </div>
 </section>
-{{ end }}{{ end }}
+{{ end }}
