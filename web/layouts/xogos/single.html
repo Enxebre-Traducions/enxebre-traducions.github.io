@@ -38,6 +38,10 @@
         <h3>Que queda en inglés</h3>
         <ul class="lista-menos">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
         {{ end }}
+        {{ with $p.agradecementos }}
+        <h3>Agradecementos</h3>
+        <ul>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
+        {{ end }}
       </section>
 
       {{ with $p.parcheador }}{{ partial "parcheador.html" $ }}{{ end }}
