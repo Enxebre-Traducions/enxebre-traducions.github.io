@@ -1,0 +1,7 @@
+{{/* Todas as categorías do filtro dun xogo: a do seu sistema e as dos de
+     params.tamen_en (outros sistemas para os que tamén hai parche). Recibe a páxina. */}}
+{{- $c := slice (partial "categoria.html" .) -}}
+{{- range .Params.tamen_en -}}
+{{- $c = $c | append (index site.Params.categorias (lower .) | default .) -}}
+{{- end -}}
+{{- return $c -}}

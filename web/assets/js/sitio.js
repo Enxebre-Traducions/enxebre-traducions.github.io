@@ -27,7 +27,7 @@
     const aplicar = () => {
       let visibles = 0;
       grella.querySelectorAll(".tarxeta").forEach((t) => {
-        const ok = (!sistema || t.dataset.sistema === sistema) && (!soProbadas.checked || t.dataset.probada === "si");
+        const ok = (!sistema || t.dataset.sistema.split("|").includes(sistema)) && (!soProbadas.checked || t.dataset.probada === "si");
         t.hidden = !ok;
         if (ok) visibles++;
       });

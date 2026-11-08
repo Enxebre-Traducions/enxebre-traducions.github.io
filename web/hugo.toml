@@ -15,8 +15,8 @@ disableKinds = ["taxonomy", "term"]
   # A chave é o «sistema» da ficha en minúsculas; a tarxeta e a ficha seguen
   # dicindo o sistema de verdade. Os que non estean aquí van co seu nome.
   [params.categorias]
-    nes = "NES / Famicom"
-    famicom = "NES / Famicom"
+    nes = "Famicom/NES"
+    famicom = "Famicom/NES"
 
   # Doazóns: a ligazón de PayPal (paypal.me/... ou a de «Doar» de PayPal).
   # Mentres estea baleira, o botón non aparece en ningures.

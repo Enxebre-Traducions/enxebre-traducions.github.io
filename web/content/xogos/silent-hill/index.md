@@ -4,6 +4,8 @@ date: 2026-11-07
 lastmod: 2026-11-07
 subtitulo: "Outeiro Silencioso: o clásico do terror de PlayStation, en galego e con voces."
 sistema: "PS1"
+# outros sistemas para os que tamén hai parche (saen na tarxeta e no filtro)
+tamen_en: ["PC"]
 plataforma: "PlayStation e PC (Linux)"
 ano: 1999
 compania: "Konami"

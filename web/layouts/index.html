@@ -58,7 +58,7 @@
             {{ with $d.en }}<span class="crt-etiqueta escaparate-etiqueta-en">Orixinal</span>{{ end }}
             <span class="crt-etiqueta crt-etiqueta-gl escaparate-etiqueta-gl">Galego</span>
           </span>
-          <span class="escaparate-pe">{{ $x.Title }} · {{ $x.Params.sistema }}</span>
+          <span class="escaparate-pe">{{ $x.Title }} · {{ partial "sistemas.html" $x }}</span>
         </a>
         {{ end }}
       </div>
@@ -78,7 +78,7 @@
         <a href="{{ .RelPermalink }}">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
           <span class="novidades-xogo">{{ .Title }}</span>
-          <span class="novidades-sistema">{{ .Params.sistema }}</span>
+          <span class="novidades-sistema">{{ partial "sistemas.html" . }}</span>
         </a>
       </li>
       {{ end }}

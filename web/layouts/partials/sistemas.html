@@ -1,0 +1,2 @@
+{{/* Os sistemas dun xogo para amosar: «PS1» ou «PS1 / PC» se ten params.tamen_en. */}}
+{{- return delimit (slice (partial "categoria.html" .) | append (.Params.tamen_en | default slice)) " / " -}}

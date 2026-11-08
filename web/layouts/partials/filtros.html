@@ -1,6 +1,6 @@
 {{/* Filtros da grella. Recibe a lista de xogos. */}}
 {{ $sistemas := slice }}
-{{ range . }}{{ $sistemas = $sistemas | append (partial "categoria.html" .) }}{{ end }}
+{{ range . }}{{ $sistemas = $sistemas | append (partial "categorias.html" .) }}{{ end }}
 <div class="filtros" data-filtros>
   <div class="chips" role="group" aria-label="Filtrar por sistema">
     <button type="button" class="chip" aria-pressed="true" data-sistema="">Todas</button>
