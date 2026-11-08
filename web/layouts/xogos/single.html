@@ -35,7 +35,7 @@
         <ul class="lista-check">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
         {{ end }}
         {{ with $p.sen_traducir }}
-        <h3>Que queda en inglés</h3>
+        <h3>{{ $p.sen_traducir_titulo | default "Que queda en inglés" }}</h3>
         <ul class="lista-menos">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
         {{ end }}
         {{ with $p.agradecementos }}

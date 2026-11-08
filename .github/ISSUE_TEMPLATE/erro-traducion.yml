@@ -18,6 +18,8 @@ body:
         - "Penumbra: Overture (PC)"
         - "P.T. (Silent Hills) (PC)"
         - Lakeview Valley (PC)
+        - Silent Hill (PS1)
+        - "Crisol: Theater of Idols (PC)"
         - Outro
     validations:
       required: true

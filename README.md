@@ -50,6 +50,7 @@ xogos serían meses de enxeñaría inversa en vez de días de tradución.
 | [Lakeview Valley](https://enxebre-traducions.github.io/xogos/lakeview-valley/) | PC (Linux) | v1.0 | Completa | ✅ Si (mundo vivo: pode haber fallos en camiños que non se viron) |
 | [Sweet Home (Japan)](https://enxebre-traducions.github.io/xogos/sweet-home-famicom/) | Famicom | v0.9 | Completa (desde o xaponés) | ⏳ Aínda non: o comezo, en ares e Mesen; falta enteira e na consola |
 | [Silent Hill (USA)](https://enxebre-traducions.github.io/xogos/silent-hill/) | PlayStation e PC (Linux), co port de PC | v0.9.2 | Completa, con dobraxe opcional | ⏳ Aínda non: o comezo, ata saír do café e vencer o primeiro monstro |
+| [Crisol: Theater of Idols](https://enxebre-traducions.github.io/xogos/crisol-theater-of-idols/) | PC (Linux) | v1.0 | Completa, con dobraxe opcional | ✅ Si |
 
 «Probada por humanos» quere dicir que unha persoa xogou o xogo enteiro coa
 tradución posta. As que aínda non o están pasaron as comprobacións
