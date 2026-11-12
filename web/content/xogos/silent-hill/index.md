@@ -1,8 +1,8 @@
 ---
 title: "Silent Hill"
 date: 2026-11-07
-lastmod: 2026-11-07
-subtitulo: "Outeiro Silencioso: o clásico do terror de PlayStation, en galego e con voces."
+lastmod: 2026-11-12
+subtitulo: "Outeiro do Silencio: o clásico do terror de PlayStation, en galego e con voces."
 sistema: "PS1"
 # outros sistemas para os que tamén hai parche (saen na tarxeta e no filtro)
 tamen_en: ["PC"]
@@ -10,7 +10,7 @@ plataforma: "PlayStation e PC (Linux)"
 ano: 1999
 compania: "Konami"
 xenero: "Terror"
-version: "0.9.2"
+version: "0.9.3"
 estado: "Completa, con dobraxe opcional"
 
 probada: false
@@ -65,12 +65,12 @@ instalador:
 
 descargas:
   - nome: "PlayStation, con dobraxe"
-    nota: "Versión 0.9.2 (.zip, 33 MB). Parche xdelta: textos e voces"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/silent-hill-v0.9.2/Silent-Hill-en-galego-PS1-0.9.2.zip"
+    nota: "Versión 0.9.3 (.zip, 33 MB). Parche xdelta: textos e voces"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/silent-hill-v0.9.3/Silent-Hill-en-galego-PS1-0.9.3.zip"
     destacada: true
   - nome: "PlayStation, só textos"
-    nota: "Versión 0.9.2 (.zip, 2 MB). Voces orixinais en inglés"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/silent-hill-v0.9.2/Silent-Hill-en-galego-PS1-0.9.2-so-textos.zip"
+    nota: "Versión 0.9.3 (.zip, 2 MB). Voces orixinais en inglés"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/silent-hill-v0.9.3/Silent-Hill-en-galego-PS1-0.9.3-so-textos.zip"
   - nome: "PC (Linux), con dobraxe"
     nota: "Versión 0.9.2 (.zip, 49 MB). Instalador: textos e voces"
     url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/silent-hill-v0.9.2/Silent-Hill-en-galego-PC-0.9.2.zip"
@@ -95,9 +95,9 @@ Está traducido enteiro ao galego e tamén dobrado: cada personaxe fala coa súa
 
 Hai dúas versións, cos mesmos textos: un parche para o disco de PlayStation e un instalador para o port de PC en Linux, e cada unha vén con dobraxe ou só con textos.
 
-### Por que «Outeiro Silencioso»
+### Por que «Outeiro do Silencio»
 
-A pantalla do título pon «Outeiro Silencioso», cun «Silent Hill» pequeno debaixo, porque nos fixo graza traducilo. É só iso: no resto do xogo o pobo chámase Silent Hill, como debe ser.
+A pantalla do título pon «Outeiro do Silencio», cun «Silent Hill» pequeno debaixo, porque nos fixo graza traducilo. É só iso: no resto do xogo o pobo chámase Silent Hill, como debe ser. (No paquete de PC, que segue na versión 0.9.2, aínda pon «Outeiro Silencioso».)
 
 ### Na PlayStation
 
