@@ -1,14 +1,14 @@
 ---
 title: "Crisol: Theater of Idols"
 date: 2026-11-08
-lastmod: 2026-11-08
+lastmod: 2026-11-14
 subtitulo: "O terror de Hispania, en galego: textos, menús, o logotipo e, se queres, tamén as voces."
 sistema: "PC"
 plataforma: "PC (Linux)"
 ano: 2026
 compania: "Vermila Studios"
 xenero: "Acción e terror"
-version: "1.0"
+version: "1.0.1"
 estado: "Completa, con dobraxe opcional"
 
 probada: true
@@ -64,12 +64,12 @@ instalador:
 
 descargas:
   - nome: "Con dobraxe galega"
-    nota: "Versión 1.0 (.zip, 114 MB). Textos, menús, logotipo e voces"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/crisol-theater-of-idols-v1.0/Crisol-en-galego-1.0.zip"
+    nota: "Versión 1.0.1 (.zip, 114 MB). Textos, menús, logotipo e voces"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/crisol-theater-of-idols-v1.0.1/Crisol-en-galego-1.0.1.zip"
     destacada: true
   - nome: "Só textos"
-    nota: "Versión 1.0 (.zip, 600 KB). Voces orixinais en inglés ou castelán"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/crisol-theater-of-idols-v1.0/Crisol-en-galego-1.0-so-textos.zip"
+    nota: "Versión 1.0.1 (.zip, 600 KB). Voces orixinais en inglés ou castelán"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/crisol-theater-of-idols-v1.0.1/Crisol-en-galego-1.0.1-so-textos.zip"
 
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA"]
