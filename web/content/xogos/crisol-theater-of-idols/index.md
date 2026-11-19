@@ -80,6 +80,10 @@ descargas:
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA"]
   - ["Dobraxe", "Voces xeradas con IA"]
+
+# Atopouno ferramentas/videos_youtube.py
+video:
+  youtube: "DVwQpdmbsXg"
 ---
 
 *Crisol: Theater of Idols* é un xogo de acción e terror en primeira persoa ambientado en Hispania, unha versión retorcida de España. Es Gabriel, un soldado que usa o seu propio sangue como munición, e tes que abrirte camiño por Tormentosa.
