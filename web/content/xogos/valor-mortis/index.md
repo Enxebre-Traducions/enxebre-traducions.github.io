@@ -7,7 +7,7 @@ plataforma: "PC (Linux)"
 ano: 2026
 compania: "One More Level"
 xenero: "Acción e terror"
-version: "1.0"
+version: "1.0.1"
 estado: "Completa (textos)"
 
 probada: true
@@ -38,7 +38,7 @@ sen_traducir:
 
 rom:
   nome: "Valor Mortis 1.3.5124.0, probada coa versión de PC Game Pass"
-  nota: "En Linux, co xogo de Windows funcionando con Proton, Wine, Heroic, Lutris ou Bottles. O instalador recoñece a versión coa que se fixo e se probou a tradución; se a túa copia é doutra (a de Steam ou unha actualización posterior), avisa e pregunta antes de tocar nada. O paquete non trae o xogo: precisas telo instalado."
+  nota: "En Linux, co xogo de Windows funcionando con Proton, Wine, Heroic, Lutris ou Bottles. Para xogar a versión de Game Pass en Linux pódese usar [Xodus Nexus](https://github.com/domsvoboda/xodus-nexus). A tradución probouse coa versión 1.3.5124.0 de PC Game Pass; nas outras (a de Steam ou as actualizacións posteriores) debería funcionar igual, e o instalador avisa e instala. Se atopas calquera erro nesas versións, avísanos. O paquete non trae o xogo: precisas telo instalado."
 
 instalador:
   onde: "Linux"
@@ -52,8 +52,8 @@ instalador:
 
 descargas:
   - nome: "Valor Mortis en galego"
-    nota: "Versión 1.0 (.zip, 250 KB)"
-    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/valor-mortis-v1.0/Valor-Mortis-en-galego-1.0.zip"
+    nota: "Versión 1.0.1 (.zip, 255 KB)"
+    url: "https://github.com/enxebre-traducions/enxebre-traducions.github.io/releases/download/valor-mortis-v1.0.1/Valor-Mortis-en-galego-1.0.1.zip"
     destacada: true
 
 creditos:
