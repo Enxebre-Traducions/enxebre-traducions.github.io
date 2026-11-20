@@ -58,6 +58,9 @@ descargas:
 
 creditos:
   - ["Tradución", "Enxebre Traducións, con IA"]
+
+video:
+  youtube: "v6iScyyCdwA"
 ---
 
 *Valor Mortis* é un xogo de acción en primeira persoa ambientado nunha versión escura das guerras napoleónicas. Es William, un soldado da Grande Armée que esperta entre cadáveres nun campo de batalla onde unha praga escarlata está a converter os mortos en monstros.
