@@ -3,7 +3,7 @@
      (cada entrada: nome e, opcional, data). En PC non hai probas: abonda con probada e probada_data.
      probada_texto (opcional) substitúe a frase de «xogouna enteira», por exemplo nun xogo con moitos camiños. */}}
 {{ $p := .Params }}
-<p>{{ if $p.probada }}{{ with $p.probada_texto }}{{ . }}{{ else }}Unha persoa xogouna enteira, de principio a fin, sen atopar textos rotos nin letras raras.{{ end }}{{ else }}{{ $p.sen_probar }}{{ end }}</p>
+<p>{{ if $p.probada }}{{ with $p.probada_texto }}{{ . | markdownify }}{{ else }}Unha persoa xogouna enteira, de principio a fin, sen atopar textos rotos nin letras raras.{{ end }}{{ else }}{{ $p.sen_probar }}{{ end }}</p>
 {{ with $p.probas }}
 <dl class="probas">
   {{ range slice (dict "titulo" "Emuladores" "lista" .emuladores) (dict "titulo" "Hardware real" "lista" .hardware) }}

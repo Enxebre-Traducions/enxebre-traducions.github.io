@@ -12,7 +12,7 @@ estado: "Completa (textos)"
 
 probada: true
 probada_data: 2026-11-20
-probada_texto: "Unha persoa xogou cos textos en galego os sete primeiros capítulos sen atopar erros: nin textos rotos, nin letras raras, nin nada sen traducir. Deixouno aí por aburrimento, non por ningún fallo. O resto do xogo está traducido igual, pero aínda non o xogou ninguén."
+probada_texto: "Probada en parte. [Le a descrición completa](#sobre-xogo)."
 
 portada: "capturas/portada.png"
 escaparate:
@@ -66,3 +66,5 @@ video:
 *Valor Mortis* é un xogo de acción en primeira persoa ambientado nunha versión escura das guerras napoleónicas. Es William, un soldado da Grande Armée que esperta entre cadáveres nun campo de batalla onde unha praga escarlata está a converter os mortos en monstros.
 
 A tradución pon en galego todos os textos: menús, diario, cartas, misións e os subtítulos de todos os diálogos. As voces quedan no seu idioma orixinal.
+
+Unha persoa xogou cos textos en galego os sete primeiros capítulos completos sen atopar erros: nin textos rotos, nin letras raras, nin nada sen traducir. Deixouno aí por aburrimento, non por ningún fallo. O resto do xogo está traducido igual, pero aínda non o xogou ninguén.
